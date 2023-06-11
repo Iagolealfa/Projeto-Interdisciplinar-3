@@ -34,7 +34,7 @@ plt.tight_layout()
 
 st.pyplot(fig)
 
-
+#Neto---------------------------------------------------------------------------------------------------------------------------------------------------------
 #Carrega a base de dados fatal_encounters_dot_org
 dataframe_fatal_encounters = pd.read_csv('../data/fatal_encounters_dot_org.csv')
 
@@ -74,3 +74,4 @@ plt.title(f'Valor absoluto separado por raça de mortes por: {causa_especifica}'
 
 # Exibe o gráfico
 st.pyplot(plt)
+#Neto---------------------------------------------------------------------------------------------------------------------------------------------------------
