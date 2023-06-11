@@ -1,12 +1,13 @@
 import streamlit as st
 import numpy as np
+import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
 
 st.set_page_config(
     page_title = "Análise de Dados",
-    layout = "wide",
+    
     menu_items = {
         'About': "TESTE DO ABOUT"
     }
@@ -94,3 +95,23 @@ st.bar_chart(data_by_state)
 plt.show()
 
 #Iago-------------------------------------------------------------------------------
+
+#Caio-------------------------------------------------------------------------------
+# Título da página
+st.subheader("Boxplot da Idade")
+
+# Carrega o dataset
+dataset = pd.read_csv("../data/shootings_wash_post.csv")
+
+# Obtém a coluna "idade"
+idade = dataset["age"]
+
+# Cria o boxplot
+plt.figure(figsize=(8, 6))
+sns.boxplot(y=idade)
+plt.ylabel("Idade")
+plt.title("Boxplot da Idade")
+
+
+st.pyplot(plt)
+#Caio-------------------------------------------------------------------------------
