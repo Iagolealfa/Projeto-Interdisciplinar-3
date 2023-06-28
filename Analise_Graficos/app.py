@@ -42,6 +42,7 @@ st.map(dataframe_fatal_encounters[dataframe_fatal_encounters["Subject's race"] =
 
 #Plotagem do histograma
 # Filtra o dataframe para uma raça específica
+fig1 = plt.figure()
 causa_especifica = selectBy(dataframe_fatal_encounters["Cause of death"])
 st.subheader('Valor absoluto de mortes separado por etnia')
 df_filtrado = dataframe_fatal_encounters[dataframe_fatal_encounters["Cause of death"] == causa_especifica]
@@ -55,13 +56,14 @@ plt.xlabel('Causa da Morte')
 plt.ylabel('Contagem')
 
 # Exibe o gráfico
-st.pyplot(plt)
+st.pyplot(fig1)
 
 
 #carregando a tabela shootings_wash_post
 dataShootings = pd.read_csv('../data/shootings_wash_post.csv')
 st.subheader('Quantidade de mortes com separação de raça por estado')
 
+fig2 = plt.figure()
 selected_race_2 = selectBy(dataShootings['race'])
 df_filtrado_2 = dataShootings[dataShootings['race'] == selected_race_2]
 
@@ -70,11 +72,11 @@ contagem_2 = df_filtrado_2["state"].value_counts()
 contagem_2.plot(kind='bar')
 
 # Configurações do gráfico
-plt.xlabel('Causa da Morte')
-plt.ylabel('Contagem')
+plt.xlabel('Estado')
+plt.ylabel('Quantidade de mortes')
 
 # Exibe o gráfico
-st.pyplot(plt)
+st.pyplot(fig2)
 
 dataShareRace = pd.read_csv('../data/ShareRaceByCity.csv')
 dataShareRace = dataShareRace.replace('(X)', float('nan'))
@@ -119,3 +121,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+    
