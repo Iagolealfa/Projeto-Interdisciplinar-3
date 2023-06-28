@@ -91,9 +91,7 @@ plt.show()
 filtered_data = dataShootings[['body_camera', 'manner_of_death']]
 filtered_data = filtered_data.dropna()
 deaths_by_body_camera = filtered_data.groupby('body_camera')['manner_of_death'].count()
-
 st.subheader('Relação entre uso de Body Camera e quantidade de mortes')
-
 fig, ax = plt.subplots()
 x_values = np.arange(2)  # Valores 0 e 1 no eixo x
 plt.bar(x_values, deaths_by_body_camera.values)
@@ -101,7 +99,6 @@ plt.xticks(x_values, ['0', '1'])  # Define os rótulos do eixo x
 plt.xlabel('Body Camera')
 plt.ylabel('Quantidade de Mortes')
 plt.title('Relação entre uso de Body Camera e quantidade de mortes')
-
 st.pyplot(fig)
 
 
