@@ -1,8 +1,6 @@
 import streamlit as st
 import dataAll
-
-
-
+from analiseExploratoria.plots import runPlots
 st.set_page_config(
     page_title = "Police Shooting",
     layout = "wide")
@@ -12,10 +10,11 @@ def barra_Lateral():
 
     if app_selection == "All Dataset":
         dataAll.run()
-    
-        
+    elif app_selection == "Analise Graficos":
+        runPlots()
        
     
+       
 
 def main():
     barra_Lateral()

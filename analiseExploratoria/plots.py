@@ -5,22 +5,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-st.set_page_config(
-    page_title = "Análise de Dados",
-    
-    menu_items = {
-        'About': "TESTE DO ABOUT"
-    }
-)
 
 st.title('Análise de Exploratória')
+
 
 
 def selectBy(lista_itens):
     return st.selectbox('Selecione uma opção', lista_itens.unique())
 
 #carregando a tabela fatal_encounters_dot_org
-dataframe_fatal_encounters = pd.read_csv('..\data\\fatal_encounters_dot_org.csv')
+dataframe_fatal_encounters = pd.read_csv('data\\fatal_encounters_dot_org.csv')
 
 #Ajustar colunas
 dataframe_fatal_encounters.rename(columns={'Latitude': 'lat'}, inplace=True)
@@ -103,10 +97,9 @@ plt.ylabel('Quantidade de Mortes')
 plt.title('Relação entre uso de Body Camera e quantidade de mortes')
 st.pyplot(fig)
 
-
 def boxPlotIdade():
     st.subheader("Boxplot da Idade")
-    dataset = pd.read_csv("../data/shootings_wash_post.csv")
+    dataset = pd.read_csv("data/shootings_wash_post.csv")
     idade = dataset["age"]
     plt.figure(figsize=(8, 6))
     sns.boxplot(y=idade)
@@ -115,12 +108,12 @@ def boxPlotIdade():
     st.pyplot(plt)
 
 
-
-def main():
+def runPlots():
     boxPlotIdade()
 
-if __name__ == "__main__":
-    main()
+    
+
+
 
 
 
