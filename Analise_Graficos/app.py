@@ -96,22 +96,20 @@ plt.show()
 
 #Iago-------------------------------------------------------------------------------
 
-#Caio-------------------------------------------------------------------------------
-# Título da página
-st.subheader("Boxplot da Idade")
-
-# Carrega o dataset
-dataset = pd.read_csv("../data/shootings_wash_post.csv")
-
-# Obtém a coluna "idade"
-idade = dataset["age"]
-
-# Cria o boxplot
-plt.figure(figsize=(8, 6))
-sns.boxplot(y=idade)
-plt.ylabel("Idade")
-plt.title("Boxplot da Idade")
+def boxPlotIdade():
+    st.subheader("Boxplot da Idade")
+    dataset = pd.read_csv("../data/shootings_wash_post.csv")
+    idade = dataset["age"]
+    plt.figure(figsize=(8, 6))
+    sns.boxplot(y=idade)
+    plt.ylabel("Idade")
+    plt.title("Boxplot da Idade")
+    st.pyplot(plt)
 
 
-st.pyplot(plt)
-#Caio-------------------------------------------------------------------------------
+
+def main():
+    boxPlotIdade()
+
+if __name__ == "__main__":
+    main()
