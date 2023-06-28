@@ -58,6 +58,7 @@ st.pyplot(plt)
 #Neto---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Iago-------------------------------------------------------------------------------
+
 dataShootings = pd.read_csv('../data/shootings_wash_post.csv')
 st.subheader('Quantidade de mortes com separação de raça por estado')
 grouped_data = dataShootings.groupby(['state', 'race']).size().unstack(fill_value=0)
@@ -70,6 +71,21 @@ plt.tight_layout()
 st.pyplot(fig)
 
 
+
+
+
+dataShareRace = pd.read_csv('../data/ShareRaceByCity.csv')
+dataShareRace = dataShareRace.replace('(X)', float('nan'))
+dataShareRace['share_white'] = pd.to_numeric(dataShareRace['share_white'])
+dataShareRace['share_black'] = pd.to_numeric(dataShareRace['share_black'])
+dataShareRace['share_asian'] = pd.to_numeric(dataShareRace['share_asian'])
+dataShareRace['share_native_american'] = pd.to_numeric(dataShareRace['share_native_american'])
+dataShareRace['share_hispanic'] = pd.to_numeric(dataShareRace['share_hispanic'])
+data_by_state = dataShareRace.groupby('Geographic area').mean()
+st.subheader('Distribuição étnica por estado')
+st.bar_chart(data_by_state)
+plt.show()
+
 filtered_data = dataShootings[['body_camera', 'manner_of_death']]
 filtered_data = filtered_data.dropna()  
 deaths_by_body_camera = filtered_data.groupby('body_camera')['manner_of_death'].count()
@@ -81,18 +97,7 @@ plt.ylabel('Quantidade de Mortes')
 plt.title('Relação entre uso de Body Camera e quantidade de mortes')
 st.pyplot(fig)
 
-dataShareRace = pd.read_csv('../data/ShareRaceByCity.csv')
-dataShareRace = dataShareRace.replace('(X)', float('nan'))
-dataShareRace['share_white'] = pd.to_numeric(dataShareRace['share_white'])
-dataShareRace['share_black'] = pd.to_numeric(dataShareRace['share_black'])
-dataShareRace['share_asian'] = pd.to_numeric(dataShareRace['share_asian'])
-dataShareRace['share_native_american'] = pd.to_numeric(dataShareRace['share_native_american'])
-dataShareRace['share_hispanic'] = pd.to_numeric(dataShareRace['share_hispanic'])
-st.write(dataShareRace['Geographic area'].dtypes)
-data_by_state = dataShareRace.groupby('Geographic area').mean()
-st.subheader('Distribuição étnica por estado')
-st.bar_chart(data_by_state)
-plt.show()
+
 
 #Iago-------------------------------------------------------------------------------
 
