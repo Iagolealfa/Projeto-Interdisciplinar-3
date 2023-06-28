@@ -70,8 +70,8 @@ contagem_2 = df_filtrado_2["state"].value_counts()
 contagem_2.plot(kind='bar')
 
 # Configurações do gráfico
-plt.xlabel('Causa da Morte')
-plt.ylabel('Contagem')
+plt.xlabel('Estado')
+plt.ylabel('Qtd mortes')
 
 # Exibe o gráfico
 st.pyplot(plt)
