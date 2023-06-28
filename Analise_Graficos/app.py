@@ -13,7 +13,7 @@ st.set_page_config(
     }
 )
 
-st.title('Análise de Dados')
+st.title('Análise de Exploratória')
 
 
 def selectBy(lista_itens):
@@ -42,13 +42,12 @@ st.map(dataframe_fatal_encounters[dataframe_fatal_encounters["Subject's race"] =
 
 #Plotagem do histograma
 # Filtra o dataframe para uma raça específica
-causa_especifica = st.selectbox('Selecione uma opção', dataframe_fatal_encounters["Cause of death"].unique())
+fig1 = plt.figure()
+causa_especifica = selectBy(dataframe_fatal_encounters["Cause of death"])
 st.subheader('Valor absoluto de mortes separado por etnia')
 df_filtrado = dataframe_fatal_encounters[dataframe_fatal_encounters["Cause of death"] == causa_especifica]
 
 contagem = df_filtrado["Subject's race"].value_counts()
-
-st.bar_chart(contagem)
 
 contagem.plot(kind='bar')
 
@@ -57,24 +56,27 @@ plt.xlabel('Causa da Morte')
 plt.ylabel('Contagem')
 
 # Exibe o gráfico
-st.pyplot(plt)
+st.pyplot(fig1)
 
-#Iago-------------------------------------------------------------------------------
 
+#carregando a tabela shootings_wash_post
 dataShootings = pd.read_csv('../data/shootings_wash_post.csv')
 st.subheader('Quantidade de mortes com separação de raça por estado')
-grouped_data = dataShootings.groupby(['state', 'race']).size().unstack(fill_value=0)
-fig, ax = plt.subplots(figsize=(10, 6))
-grouped_data.plot(kind='bar', stacked=True, ax=ax)
-ax.set_xlabel('Estado')
-ax.set_ylabel('Quantidade')
-ax.legend(title='Raça', title_fontsize='11', fontsize='9')
-plt.tight_layout()
-st.pyplot(fig)
 
+fig2 = plt.figure()
+selected_race_2 = selectBy(dataShootings['race'])
+df_filtrado_2 = dataShootings[dataShootings['race'] == selected_race_2]
 
+contagem_2 = df_filtrado_2["state"].value_counts()
 
+contagem_2.plot(kind='bar')
 
+# Configurações do gráfico
+plt.xlabel('Estado')
+plt.ylabel('Quantidade de mortes')
+
+# Exibe o gráfico
+st.pyplot(fig2)
 
 dataShareRace = pd.read_csv('../data/ShareRaceByCity.csv')
 dataShareRace = dataShareRace.replace('(X)', float('nan'))
@@ -89,19 +91,18 @@ st.bar_chart(data_by_state)
 plt.show()
 
 filtered_data = dataShootings[['body_camera', 'manner_of_death']]
-filtered_data = filtered_data.dropna()  
+filtered_data = filtered_data.dropna()
 deaths_by_body_camera = filtered_data.groupby('body_camera')['manner_of_death'].count()
 st.subheader('Relação entre uso de Body Camera e quantidade de mortes')
 fig, ax = plt.subplots()
-plt.bar(deaths_by_body_camera.index, deaths_by_body_camera.values)
+x_values = np.arange(2)  # Valores 0 e 1 no eixo x
+plt.bar(x_values, deaths_by_body_camera.values)
+plt.xticks(x_values, ['0', '1'])  # Define os rótulos do eixo x
 plt.xlabel('Body Camera')
 plt.ylabel('Quantidade de Mortes')
 plt.title('Relação entre uso de Body Camera e quantidade de mortes')
 st.pyplot(fig)
 
-
-
-#Iago-------------------------------------------------------------------------------
 
 def boxPlotIdade():
     st.subheader("Boxplot da Idade")
@@ -120,3 +121,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+    
