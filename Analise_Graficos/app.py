@@ -15,9 +15,12 @@ st.set_page_config(
 
 st.title('Análise de Dados')
 
-#Neto---------------------------------------------------------------------------------------------------------------------------------------------------------
-#Carrega a base de dados fatal_encounters_dot_org
-dataframe_fatal_encounters = pd.read_csv('../data/fatal_encounters_dot_org.csv')
+
+def selectBy(lista_itens):
+    return st.selectbox('Selecione uma opção', lista_itens.unique())
+
+#carregando a tabela fatal_encounters_dot_org
+dataframe_fatal_encounters = pd.read_csv('..\data\\fatal_encounters_dot_org.csv')
 
 #Ajustar colunas
 dataframe_fatal_encounters.rename(columns={'Latitude': 'lat'}, inplace=True)
@@ -32,7 +35,7 @@ dataframe_fatal_encounters["Subject's race"].fillna("Race unspecified", inplace=
 
 #Plotagem do mapa
 st.subheader('Mapa de distribuição de mortes')
-selected_race = st.selectbox('Selecione uma opção', dataframe_fatal_encounters["Subject's race"].unique())
+selected_race = selectBy(dataframe_fatal_encounters["Subject's race"])
 
 st.map(dataframe_fatal_encounters[dataframe_fatal_encounters["Subject's race"] == selected_race])
 
@@ -55,7 +58,6 @@ plt.ylabel('Contagem')
 
 # Exibe o gráfico
 st.pyplot(plt)
-#Neto---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #Iago-------------------------------------------------------------------------------
 

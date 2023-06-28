@@ -7,6 +7,9 @@ st.set_page_config(
 
 def carregar_dataset():
     
+    with st.expander('fatal_encounters_dot_org'):
+        fatal_encounters_dot_org = pd.read_csv('data\\fatal_encounters_dot_org.csv')
+        st.write(fatal_encounters_dot_org)
     with st.expander('PoliceKillings'):
         dataPoliceKillings = pd.read_csv("data\police_killings_MPV.csv")
         st.write(dataPoliceKillings)
