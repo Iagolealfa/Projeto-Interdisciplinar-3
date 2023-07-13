@@ -164,7 +164,7 @@ def runPlots():
     bodyCamera()
     boxPlotIdade()
 
-    
+runPlots()
 
 
 

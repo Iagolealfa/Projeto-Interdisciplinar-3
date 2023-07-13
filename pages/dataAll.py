@@ -21,3 +21,5 @@ def cabecalho():
 def run():
     cabecalho()
     carregar_dataset()
+
+run()
