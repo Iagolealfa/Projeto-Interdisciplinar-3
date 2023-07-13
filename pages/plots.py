@@ -3,6 +3,7 @@ import numpy as np
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.graph_objects as go
 
 st.title('Análise de Exploratória')
 
@@ -38,24 +39,21 @@ def mapPlot():
     """)
 
 def causeByRace():
-    st.subheader('Valor absoluto de mortes separado por etnia')
     dataframe_fatal_encounters = pd.read_csv('data\\fatal_encounters_dot_org.csv')
     #Plotagem do histograma
     # Filtra o dataframe para uma raça específica
-    fig1 = plt.figure()
+    
     causa_especifica = selectBy(dataframe_fatal_encounters["Cause of death"])
     df_filtrado = dataframe_fatal_encounters[dataframe_fatal_encounters["Cause of death"] == causa_especifica]
 
     contagem = df_filtrado["Subject's race"].value_counts()
 
-    contagem.plot(kind='bar')
+    fig1 = go.Figure(data=go.Bar(x=contagem.index, y=contagem))
 
-    # Configurações do gráfico
-    plt.xlabel('Causa da Morte')
-    plt.ylabel('Contagem')
-
-    # Exibe o gráfico
-    st.pyplot(fig1)
+    fig1.update_layout(title = 'Valor absoluto de mortes separado por etnia',
+                       xaxis_title='Causa da Morte',
+                       yaxis_title='Contagem')
+    st.plotly_chart(fig1)
 
     st.text(""" 
     Este gráfico apresenta a quantidade de mortes registradas para cada uma das causas, 
@@ -68,22 +66,22 @@ def causeByRace():
 
 def deathByState():
     dataShootings = pd.read_csv('data/shootings_wash_post.csv')
+
     st.subheader('Quantidade de mortes com separação de raça por estado')
 
-    fig2 = plt.figure()
     selected_race_2 = selectBy(dataShootings['race'])
     df_filtrado_2 = dataShootings[dataShootings['race'] == selected_race_2]
 
     contagem_2 = df_filtrado_2["state"].value_counts()
 
-    contagem_2.plot(kind='bar')
+    fig = go.Figure(data=go.Bar(x=contagem_2.index, y=contagem_2))
 
-    # Configurações do gráfico
-    plt.xlabel('Estado')
-    plt.ylabel('Quantidade de mortes')
+    fig.update_layout(title='Quantidade de mortes com separação de raça por estado',
+                    xaxis_title='Estado',
+                    yaxis_title='Quantidade de mortes')
 
-    # Exibe o gráfico
-    st.pyplot(fig2)
+    # Exibe o gráfico usando o método st.plotly_chart()
+    st.plotly_chart(fig)
 
     st.text(""" 
     Este gráfico apresenta a quantidade de mortes por estado, com cada uma das etnias 
@@ -123,14 +121,14 @@ def bodyCamera():
     filtered_data = dataShootings[['body_camera', 'manner_of_death']]
     filtered_data = filtered_data.dropna()
     deaths_by_body_camera = filtered_data.groupby('body_camera')['manner_of_death'].count()
-    st.subheader('Relação entre uso de Body Camera e quantidade de mortes')
-    fig, ax = plt.subplots()
-    x_values = np.arange(2)  # Valores 0 e 1 no eixo x
-    plt.bar(x_values, deaths_by_body_camera.values)
-    plt.xticks(x_values, ['0', '1'])  # Define os rótulos do eixo x
-    plt.xlabel('Body Camera')
-    plt.ylabel('Quantidade de Mortes')
-    st.pyplot(fig)
+
+    fig = go.Figure(data=go.Bar(x=deaths_by_body_camera.index, y=deaths_by_body_camera.values))
+
+    fig.update_layout(title='Relação entre uso de Body Camera e quantidade de mortes',
+                    xaxis_title='Body Camera',
+                    yaxis_title='Quantidade de Mortes')
+
+    st.plotly_chart(fig)
 
     st.text(""" 
     Este gráfico apresenta o total de mortes dividido entre ocorrências em que os
