@@ -53,7 +53,7 @@ def causeByRace():
     fig1.update_layout(title = 'Valor absoluto de mortes separado por etnia',
                        xaxis_title='Causa da Morte',
                        yaxis_title='Contagem')
-    st.plotly__chart(fig1)
+    st.plotly_chart(fig1)
 
     st.text(""" 
     Este gráfico apresenta a quantidade de mortes registradas para cada uma das causas, 
