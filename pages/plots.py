@@ -154,6 +154,27 @@ def boxPlotIdade():
     faixas etárias que estão mais suscetíveis a essas ocorrências.
     """)
 
+def plot_gender_and_weapon_counts():
+    df = pd.read_csv("data/police_killings_MPV.csv")
+    gender_counts = df["Victim's gender"].value_counts()
+    weapon_counts = df["Unarmed/Did Not Have an Actual Weapon"].value_counts()
+    gender_categories = ['Male', 'Female', 'Transgender', 'Unknown']
+    weapon_categories = ['Allegedly Armed', 'Unarmed', 'Unclear', 'Vehicle']
+
+    st.subheader("Victim's Gender Distribution")
+    fig_gender = plt.figure(figsize=(10, 5))
+    plt.bar(gender_categories, gender_counts)
+    plt.xlabel("Gender")
+    plt.ylabel("Count")
+    st.pyplot(fig_gender)
+
+    st.subheader("Weapon Status Distribution")
+    fig_weapon = plt.figure(figsize=(10, 5))
+    plt.bar(weapon_categories, weapon_counts)
+    plt.xlabel("Weapon Status")
+    plt.ylabel("Count")
+    st.pyplot(fig_weapon)
+
 def runPlots():
     mapPlot()
     causeByRace()
@@ -161,6 +182,7 @@ def runPlots():
     raceByState()
     bodyCamera()
     boxPlotIdade()
+    plot_gender_and_weapon_counts()
 
 runPlots()
 
