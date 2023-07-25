@@ -161,19 +161,30 @@ def plot_gender_and_weapon_counts():
     gender_categories = ['Male', 'Female', 'Transgender', 'Unknown']
     weapon_categories = ['Allegedly Armed', 'Unarmed', 'Unclear', 'Vehicle']
 
-    st.subheader("Victim's Gender Distribution")
+    st.subheader("Gênero das vitimas")
     fig_gender = plt.figure(figsize=(10, 5))
     plt.bar(gender_categories, gender_counts)
     plt.xlabel("Gender")
     plt.ylabel("Count")
     st.pyplot(fig_gender)
+    st.text(""" 
+    O gráfico ilustra a quantidade de vítimas separadas por gênero. É possível notar uma 
+    significativa disparidade no número de vítimas do sexo masculino em relação ao total.    
+            """)
 
-    st.subheader("Weapon Status Distribution")
+    st.subheader("Portando armas")
     fig_weapon = plt.figure(figsize=(10, 5))
     plt.bar(weapon_categories, weapon_counts)
     plt.xlabel("Weapon Status")
     plt.ylabel("Count")
     st.pyplot(fig_weapon)
+
+    st.text(""" 
+    
+No gráfico, são apresentados os números de casos em que as vítimas estavam classific
+adas em diferentes categorias: armada, desarmada, casos em que não ficou claro se a 
+vítima possuía uma arma ou não, e quando a vítima utilizou um veículo como uma "arma".
+    """)
 
 def runPlots():
     mapPlot()
