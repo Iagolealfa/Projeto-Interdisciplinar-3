@@ -16,7 +16,7 @@ def main():
     '''st.title("Análise de Tipos e Valores Nulos do Dataset")'''
 
     
-    file_path = "../data/fatal_encounters_dot_org_update_2.csv"
+    file_path = "..\\data\\fatal_encounters_dot_org_updated_2.csv"
     df = pd.read_csv(file_path)
 
     st.subheader("Visão Geral do Conjunto de Dados")
@@ -45,15 +45,6 @@ def main():
 
     st.success("Valores na coluna 'Subject's age' que contêm 'months' foram tratados e o arquivo CSV foi atualizado localmente!")'''
     
-    
-
-    if "Subject's age" in df.columns:
-        unique_subject_age = df[["Subject's Age"]].dropna()["Subject's Age"].unique()
-        st.subheader("Dados Únicos na Coluna 'Subject's Age'")
-        st.write(unique_subject_age)
-    else:
-        st.error("Coluna 'Subject's Age' não encontrada no conjunto de dados.")
-
     
 if __name__ == "__main__":
     main()
