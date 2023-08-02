@@ -24,12 +24,12 @@ def update_data(file_path):
     
 def valoresNulos(file_path):
 
-    st.title('Resumo de Valores Nulos da Coluna "Unique ID"')
+    st.title('Resumo de Valores Nulos da Coluna "Intentional_Use_of_Force_(Developing)"')
     
     df = pd.read_csv(file_path)
-    st.subheader('Resumo de Valores Nulos da Coluna "Unique ID":')
+    st.subheader('Resumo de Valores Nulos da Coluna "Intentional_Use_of_Force_(Developing)":')
 
-    num_null_values = df['Unique_ID'].isnull().sum()
+    num_null_values = df['Intentional_Use_of_Force_(Developing)'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -49,15 +49,18 @@ def ler_e_renomear_colunas(file_path):
     df.to_csv(file_path, index=False)
 
     return df
-
-
-
-df = ler_e_renomear_colunas(file_path)
-st.dataframe(df)
-
-
 def main():
+    df = pd.read_csv(file_path)
+    unique_death = df['Intentional_Use_of_Force_(Developing)'].dropna().unique()
+    death_counts = df['Intentional_Use_of_Force_(Developing)'].value_counts()
+    df['Intentional_Use_of_Force_(Developing)'].fillna('Intentional use of deadly force', inplace=True)
+    st.write(death_counts)
+    st.write(unique_death)
+    st.dataframe(df)
+    df.to_csv(file_path, index=False)
     valoresNulos(file_path)
+
+
 
 if __name__ == '__main__':
     main()
