@@ -1,7 +1,16 @@
 import streamlit as st
 import pandas as pd
 import os
-
+def remove_variation(age_str):
+    try:
+        return age_str.replace('3 day', '0.0082')
+    except:
+        return age_str
+def remove_s(age_str):
+    try:
+        return age_str.replace('s', '')
+    except:
+        return age_str
 def months_to_years(months_str):
     try:
         if 'months' in months_str:
@@ -42,9 +51,21 @@ def main():
 
     
     df.to_csv(file_path, index=False)
+    df["Age"] = df["Subject's age"].apply(months_to_years)
+    df.drop(columns=["Subject's age"], inplace=True)
+    st.dataframe(df)
+    df.to_csv(file_path, index=False)
+    unique_subject_age = df["Age"].dropna().unique()
+    st.write(unique_subject_age)'''
+    df['Age'] = df['Age'].apply(remove_s)
+    df['Age'] = df['Age'].apply(remove_variation)
+    idade_especifica = '3 day'
+    linha_idade_especifica = df.loc[df['Age'] == idade_especifica]
+    st.write(linha_idade_especifica)
+    df.to_csv(file_path, index=False)
+    unique_subject_age = df["Age"].dropna().unique()
+    st.write(unique_subject_age)
 
-    st.success("Valores na coluna 'Subject's age' que contêm 'months' foram tratados e o arquivo CSV foi atualizado localmente!")'''
-    
-    
+    st.dataframe(df)
 if __name__ == "__main__":
     main()
