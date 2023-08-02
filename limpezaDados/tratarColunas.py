@@ -19,22 +19,19 @@ def months_to_years(months_str):
             return months_str
     except:
         return None
-def update_data(file_path):
-    df.csv(file_path,index=False)
     
 def valoresNulos(file_path):
 
-    st.title('Resumo de Valores Nulos da Coluna "Unique ID"')
+    st.title('Resumo de Valores Nulos da Coluna')
     
     df = pd.read_csv(file_path)
-    st.subheader('Resumo de Valores Nulos da Coluna "Unique ID":')
+    st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Unique_ID'].isnull().sum()
+    num_null_values = df['Subjects_race'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
     st.write(f"Número de nulo na coluna: {num_null_values}")
-
 
 def ler_e_renomear_colunas(file_path):
     df = pd.read_csv(file_path)
@@ -50,14 +47,20 @@ def ler_e_renomear_colunas(file_path):
 
     return df
 
-
-
 df = ler_e_renomear_colunas(file_path)
 st.dataframe(df)
 
 
+def deletar_linha_por_valor(file_path, column_name, value):
+    df = pd.read_csv(file_path)
+
+    df = df[df[column_name] != value]
+
+    
+    st.dataframe(df)
+
 def main():
     valoresNulos(file_path)
-
+    
 if __name__ == '__main__':
     main()

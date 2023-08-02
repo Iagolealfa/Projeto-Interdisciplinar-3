@@ -42,10 +42,10 @@ Unemployment: Unemployment rate (percent)
 Unique.ID
 Subject.s.age *
 Subject.s.gender *
-Subject.s.race *
-Subject.s.race.with.imputations *
+Subject.s.race * caio
+Subject.s.race.with.imputations * caio
 Imputation.probability
-URL.of.image.of.deceased
+URL.of.image.of.deceased    DELETAR
 Date.of.injury.resulting.in.death..month.day.year.
 Location.of.injury..address.
 Location.of.death..city. *
