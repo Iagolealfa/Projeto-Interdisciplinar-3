@@ -40,27 +40,27 @@ Unemployment: Unemployment rate (percent)
 
 ### Fatal Encounters
 Unique.ID
-Subject.s.age *
-Subject.s.gender *
-Subject.s.race *
-Subject.s.race.with.imputations *
-Imputation.probability
+* Subject.s.age: Numérica Discreta
+* Subject.s.gender: Categórica Nominal
+* Subject.s.race: Categórica Nominal
+* Subject.s.race.with.imputations: Categórica Nominal
+Imputation.probability: Numéricas Discreta
 URL.of.image.of.deceased
-Date.of.injury.resulting.in.death..month.day.year.
+Date.of.injury.resulting.in.death..month.day.year.: Numéricas Discreta
 Location.of.injury..address.
-Location.of.death..city. *
-Location.of.death..state. *
-Location.of.death..zip.code.
-Location.of.death..county.
-Full.Address
-Latitude ?
-Longitude ?
-Agency.responsible.for.death
-Cause.of.death *
+* Location.of.death..city.: Categórica Nominal
+* Location.of.death..state.: Categórica Nominal
+Location.of.death..zip.code.: Numéricas Discreta
+Location.of.death..county.: Categórica Nominal
+Full.Address: Categórica Nominal
+? Latitude: Numéricas Discreta
+? Longitude: Numéricas Discreta
+Agency.responsible.for.death: Categórica Nominal
+* Cause.of.death: Categórica Nominal
 A.brief.description.of.the.circumstances.surrounding.the.death
-Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS *
-Intentional.Use.of.Force..Developing. *
-Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS *
+* Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS: Categórica Nominal
+* Intentional.Use.of.Force..Developing.: Categórica Nominal
+* Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS: Categórica Nominal
 
 * = coluna será usada no cluster
 ? = pode ser utilizada no cluster
