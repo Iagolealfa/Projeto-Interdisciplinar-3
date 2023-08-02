@@ -48,8 +48,8 @@ Imputation.probability
 URL.of.image.of.deceased
 Date.of.injury.resulting.in.death..month.day.year.
 Location.of.injury..address.
-Location.of.death..city. *
-Location.of.death..state. *
+Location.of.death..city. *#
+Location.of.death..state. *#
 Location.of.death..zip.code.
 Location.of.death..county.
 Full.Address
@@ -59,7 +59,7 @@ Agency.responsible.for.death
 Cause.of.death *#
 A.brief.description.of.the.circumstances.surrounding.the.death
 Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS *#
-Intentional.Use.of.Force..Developing. *#
+Intentional.Use.of.Force..Developing. 
 Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS 
 
 * = coluna será usada no cluster

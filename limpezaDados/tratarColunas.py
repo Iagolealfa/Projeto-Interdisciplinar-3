@@ -24,12 +24,12 @@ def update_data(file_path):
     
 def valoresNulos(file_path):
 
-    st.title('Resumo de Valores Nulos da Coluna "Symptoms_of_mental_illness?_INTERNAL_USE"')
+    st.title('Resumo de Valores Nulos da Coluna "Dispositions/Exclusions_INTERNAL_USE"')
     
     df = pd.read_csv(file_path)
-    st.subheader('Resumo de Valores Nulos da Coluna "Symptoms_of_mental_illness?_INTERNAL_USE":')
+    st.subheader('Resumo de Valores Nulos da Coluna "Dispositions/Exclusions_INTERNAL_USE":')
 
-    num_null_values = df['Symptoms_of_mental_illness?_INTERNAL_USE'].isnull().sum()
+    num_null_values = df['Location_of_death_(state)'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -51,14 +51,14 @@ def ler_e_renomear_colunas(file_path):
     return df
 def main():
     df = pd.read_csv(file_path)
-    unique_death = df['Symptoms_of_mental_illness?_INTERNAL_USE'].dropna().unique()
-    death_counts = df['Symptoms_of_mental_illness?_INTERNAL_USE'].value_counts()
-    df['Symptoms_of_mental_illness?_INTERNAL_USE'].fillna('Intentional use of deadly force', inplace=True)
+    unique_death = df['Location_of_death_(state)'].dropna().unique()
+    death_counts = df['Location_of_death_(state)'].value_counts()
+    #df['Location_of_death_(state)'].fillna('Unknown', inplace=True)
     st.write(df.columns)
     st.write(death_counts)
     st.write(unique_death)
     st.dataframe(df)
-    df.to_csv(file_path, index=False)
+    #df.to_csv(file_path, index=False)
     valoresNulos(file_path)
 
 
