@@ -64,6 +64,7 @@ A.brief.description.of.the.circumstances.surrounding.the.death
 
 * = coluna será usada no cluster
 ? = pode ser utilizada no cluster
+# = feito
 
 
 ### Police Killings

@@ -1,24 +1,75 @@
 import streamlit as st
 import pandas as pd
 
-def main():
-    st.title('Resumo de Valores Nulos da Coluna "Unique ID"')
+file_path = "..\\data\\fatal_encounters_dot_org_updated_2.csv"
 
-    file_path = "..\\data\\fatal_encounters_dot_org.csv"
-
+def remove_variation(age_str):
     try:
-        df = pd.read_csv(file_path)
-        st.subheader('Resumo de Valores Nulos da Coluna "Unique ID":')
+        return age_str.replace('3 day', '0.0082')
+    except:
+        return age_str
 
-        num_null_values = df['Unique ID'].isnull().sum()
+def months_to_years(months_str):
+    try:
+        if 'months' in months_str:
+            months = float(months_str.split()[0])
+            years = months / 12.0
+            return round(years, 2)
+        else:
+            return months_str
+    except:
+        return None
+    
+def valoresNulos(file_path):
 
-        total_rows = df.shape[0]  
+    st.title('Resumo de Valores Nulos da Coluna')
+    
+    df = pd.read_csv(file_path)
+    st.subheader('Resumo de Valores Nulos da Coluna:')
 
-        st.write(f"Total de linhas: {total_rows}")
-        st.write(f"Número de linhas com 'Unique ID' nulo: {num_null_values}")
+    num_null_values = df['Subjects_race'].isnull().sum()
+    total_rows = df.shape[0]  
 
-    except FileNotFoundError:
-        st.error(f"Arquivo '{file_path}' não encontrado. Verifique o caminho e tente novamente.")
+    st.write(f"Total de linhas: {total_rows}")
+    st.write(f"Número de nulo na coluna: {num_null_values}")
 
+def ler_e_renomear_colunas(file_path):
+    df = pd.read_csv(file_path)
+
+
+    df.columns = df.columns.str.replace("'", "")
+
+
+    df.columns = df.columns.str.replace(' ', '_')
+
+    df.rename(columns=lambda x: x.strip().replace("'", "").replace(" ", "_"), inplace=True)
+    df.to_csv(file_path, index=False)
+
+    return df
+
+df = ler_e_renomear_colunas(file_path)
+st.dataframe(df)
+
+
+def deletar_linha_por_valor(file_path, column_name, value):
+    df = pd.read_csv(file_path)
+
+    df = df[df[column_name] != value]
+
+    
+    st.dataframe(df)
+
+def main():
+    df = pd.read_csv(file_path)
+    unique_death = df['Location_of_death_(state)'].dropna().unique()
+    death_counts = df['Location_of_death_(state)'].value_counts()
+    #df['Location_of_death_(state)'].fillna('Unknown', inplace=True)
+    st.write(df.columns)
+    st.write(death_counts)
+    st.write(unique_death)
+    st.dataframe(df)
+    #df.to_csv(file_path, index=False)
+    valoresNulos(file_path)
+    
 if __name__ == '__main__':
     main()
