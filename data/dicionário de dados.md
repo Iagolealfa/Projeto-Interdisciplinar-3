@@ -58,9 +58,9 @@ Longitude ?
 Agency.responsible.for.death
 Cause.of.death *#
 A.brief.description.of.the.circumstances.surrounding.the.death
-Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS *
+Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS *#
 Intentional.Use.of.Force..Developing. *#
-Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS *
+Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS 
 
 * = coluna será usada no cluster
 ? = pode ser utilizada no cluster
