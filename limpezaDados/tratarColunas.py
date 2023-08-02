@@ -3,8 +3,25 @@ import pandas as pd
 
 file_path = "..\\data\\fatal_encounters_dot_org_updated_2.csv"
 
+def remove_variation(age_str):
+    try:
+        return age_str.replace('3 day', '0.0082')
+    except:
+        return age_str
 
-
+def months_to_years(months_str):
+    try:
+        if 'months' in months_str:
+            months = float(months_str.split()[0])
+            years = months / 12.0
+            return round(years, 2)
+        else:
+            return months_str
+    except:
+        return None
+def update_data(file_path):
+    df.csv(file_path,index=False)
+    
 def valoresNulos(file_path):
 
     st.title('Resumo de Valores Nulos da Coluna "Unique ID"')
