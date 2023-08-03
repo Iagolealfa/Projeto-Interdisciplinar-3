@@ -59,7 +59,18 @@ def deletar_linha_por_valor(file_path, column_name, value):
     
     st.dataframe(df)
 
+import pandas as pd
+
+def imputar_race(file_path):
+    df = pd.read_csv(file_path)
+
+    mask = (df['Subjects_race'] == 'Race unspecified') & (df['Subjects_race_with_imputations'].notnull())
+    df.loc[mask, 'Subjects_race'] = df.loc[mask, 'Subjects_race_with_imputations']
+
+    df.to_csv(file_path, index=False)
+
 def main():
+    imputar_race(file_path)
     df = pd.read_csv(file_path)
     st.write(df['Dispositions/Exclusions_INTERNAL_USE'].unique())
     st.dataframe(df)
