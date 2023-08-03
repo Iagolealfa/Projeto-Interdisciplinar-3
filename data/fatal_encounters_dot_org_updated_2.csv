@@ -780,7 +780,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 595.0,Lonnie Dale Bosley,Male,European-American/White,Bethesda,MD,Gunshot,Justified,38.0
 596.0,Ryan Schorr,Male,European-American/White,Camp Hill,PA,Gunshot,Unreported,25.0
 597.0,Mark Gault,Male,European-American/White,Santa Clarita,CA,Gunshot,Unknown,37.0
-598.0,Thomas Riley Moon,Male,European-American/White,,AL,Gunshot,Ruled suicide,45.0
 599.0,Gerald E. Tucker,Male,European-American/White,Lena,IL,Vehicle,Criminal,52.0
 600.0,Joseph Macio Allain IV,Male,European-American/White,Marina Del Rey,CA,Gunshot,Unknown,20.0
 601.0,Randall Carr,Male,African-American/Black,Oklahoma City,OK,Gunshot,Unreported,38.0
@@ -1849,7 +1848,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 22357.0,John Francis Brandl,Male,European-American/White,Chesterfield,VA,Vehicle,Unreported,20.0
 1458.0,William Lee Clack,Male,African-American/Black,Little Rock,AR,Gunshot,Unreported,28.0
 1459.0,"Jesus-Pena ""Jesse"" Herrara",Male,Hispanic/Latino,Indio,CA,Gunshot,Criminal,32.0
-19447.0,Name withheld by police,Male,Race unspecified,,KY,Gunshot,Unreported,33.0
 19448.0,Jason E. Clark,Male,European-American/White,Morehead,KY,Gunshot,Suicide,23.0
 1460.0,Gregory Hooper,Male,African-American/Black,San Francisco,CA,Gunshot,Unreported,37.0
 21955.0,Johnny Jacobs,Male,European-American/White,Ligonier,IN,Drowned,Unreported,41.0
@@ -2973,7 +2971,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 22018.0,Terrance Sean Lige,Male,African-American/Black,Gary,IN,Gunshot,Suicide,30.0
 2373.0,Rohan Garfield McKay,Male,African-American/Black,Fort Lauderdale,FL,Gunshot,Unreported,39.0
 2374.0,Shane Cockrell Swearengin,Male,European-American/White,Modesto,CA,Vehicle,Unreported,39.0
-2375.0,Jesse Hamilton,Male,African-American/Black,,AL,Gunshot,Suicide,33.0
 2376.0,Sonia Caine,Female,European-American/White,Theodore,AL,Vehicle,Unreported,22.0
 2377.0,Paul Caine,Male,European-American/White,Theodore,AL,Vehicle,Unreported,27.0
 2378.0,Henry Rodriguez,Male,Hispanic/Latino,Long Beach,CA,Gunshot,Unreported,24.0
@@ -4401,7 +4398,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 3536.0,Stacy Williamson,Female,European-American/White,Cincinnati,OH,Vehicle,Justified,15.0
 3537.0,Nickole Williamson,Female,European-American/White,Cincinnati,OH,Vehicle,Justified,23.0
 21035.0,Robert Steven VanBuren,Male,European-American/White,Plymouth,MI,Gunshot,Civil suit/Family awarded money,36.0
-3538.0,Derrick L. Zumalt,Male,European-American/White,,MO,Vehicle,Unreported,20.0
 3539.0,"George Robert ""Rob"" Johnston",Male,European-American/White,Ibex Pass,CA,Gunshot,Ruled suicide,50.0
 3540.0,Michael Dale Anderson Jr.,Male,European-American/White,Cudahy,CA,Gunshot,Unreported,39.0
 22453.0,Justin Carlos Sanchez,Male,Hispanic/Latino,Newport News,VA,Gunshot,Suicide,22.0
@@ -4421,7 +4417,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 22855.0,Jacobo Gonzalez Hemandaz,Male,Hispanic/Latino,Chattanooga,TN,Vehicle,Unreported,18.0
 22856.0,Silvino Valasquez Hernandez,Male,Hispanic/Latino,Chattanooga,TN,Vehicle,Unreported,30.0
 3550.0,"Joseph ""Shotgun"" Williams",Male,African-American/Black,New Orleans,LA,Gunshot,Unreported,22.0
-3551.0,Name withheld by police,Male,Race unspecified,,MS,Vehicle,Unknown,33.0
 3552.0,Nicholas Gilbert Fimbrez,Male,Hispanic/Latino,San Bernardino,CA,Gunshot,Justified,27.0
 3553.0,Jorge Alejandro Ojeda,Male,Hispanic/Latino,San Diego,CA,Gunshot,Unreported,25.0
 19724.0,Richard Wright,Male,European-American/White,Allentown,PA,Gunshot,Suicide,54.0
@@ -4582,7 +4577,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 19716.0,Angelo C. Boria Jr.,Male,Hispanic/Latino,Reading,PA,Beaten/Bludgeoned with instrument,Unreported,25.0
 21691.0,Gregory Davis,Male,African-American/Black,South Hackensack,NJ,Gunshot,Unreported,49.0
 3674.0,Antonio Latuanee Pryce,Male,African-American/Black,High Point,NC,Gunshot,Justified,23.0
-3675.0,Julian A. Molina,Male,Hispanic/Latino,,KS,Vehicle,Unreported,24.0
 20363.0,Michael Thiel,Male,European-American/White,Middleton,WI,Vehicle,Unreported,21.0
 22852.0,Mark Wayne Chumley,Male,European-American/White,Millington,TN,Gunshot,Justified,34.0
 3676.0,Vanessa Jimenez,Female,Hispanic/Latino,Hollister,CA,Vehicle,Unreported,13.0
@@ -4678,7 +4672,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 3748.0,Todd Michael Roberson,Male,European-American/White,Mesa,AZ,Gunshot,Unreported,44.0
 22850.0,J.D. Nash,Male,African-American/Black,Carthage,MS,Gunshot,Unreported,33.0
 3523.0,Brian Schweitzer,Male,European-American/White,Antioch,TN,Gunshot,Unreported,34.0
-3749.0,Ryan Arnold,Male,European-American/White,,MO,Gunshot,Suicide,26.0
 3750.0,Jamar Antwan West,Male,African-American/Black,North Charleston,SC,Gunshot,Unreported,20.0
 3751.0,Tim Leitz,Male,European-American/White,Loganville,GA,Gunshot,Unreported,36.0
 3752.0,Booker Carloss II,Male,African-American/Black,Oakland,CA,Gunshot,Unknown,50.0
@@ -4892,7 +4885,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 22495.0,Demario Joyner,Male,African-American/Black,Virginia Beach,VA,Gunshot,Justified,17.0
 3920.0,Paul Sanchez,Male,Hispanic/Latino,La Habra,CA,Gunshot,Unreported,26.0
 18856.0,Alfred Daniel Behney Jr.,Male,African-American/Black,Blacksburg,SC,Gunshot,Justified,42.0
-22154.0,"Raymond ""Eddie"" Flanagan",Male,European-American/White,,IN,Gunshot,Unreported,38.0
 3921.0,Manuel Zaragoza Lopez,Male,Hispanic/Latino,Ontario,CA,Gunshot,Justified,24.0
 3922.0,Arcelia Balbontin,Female,Hispanic/Latino,Chicago,IL,Stabbed,Criminal,29.0
 3923.0,Francisco T. Barva,Male,Hispanic/Latino,Hobbs,NM,Gunshot,Unreported,23.0
@@ -4942,7 +4934,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 19860.0,Robert D. Tanchuk,Male,Race unspecified,New Castle,PA,Vehicle,Unreported,33.0
 3955.0,Juan Tejeda,Male,Hispanic/Latino,Farmers Branch,TX,Gunshot,Unreported,17.0
 3956.0,Wang Jie,Male,Asian/Pacific Islander,Berkeley,CA,Vehicle,Criminal,24.0
-3957.0,Matthew Stephenson,Male,African-American/Black,,MS,Vehicle,Unknown,33.0
 3958.0,Thomas Setzer,Male,European-American/White,Pinellas Park,FL,Gunshot,Unreported,24.0
 3959.0,Joseph Manuel Trevino,Male,Hispanic/Latino,Los Angeles,CA,Gunshot,Unreported,45.0
 3960.0,Kip Pepin,Male,European-American/White,Salem,NH,Gunshot,Justified,27.0
@@ -5154,7 +5145,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 22492.0,Yobani Sosa,Male,Hispanic/Latino,Richmond,VA,Gunshot,Justified,26.0
 4115.0,Scott Alan Chapman,Male,European-American/White,Huntington Beach,CA,Gunshot,Suicide,43.0
 25840.0,Daniel L. Shipley,Male,European-American/White,Murray,UT,Gunshot,Use of force justified,42.0
-4116.0,Kenneth Lewis,Male,European-American/White,,KS,Vehicle,Suicide,20.0
 4117.0,Michael Bosworth Yurish,Male,European-American/White,Martinsburg,WV,Gunshot,Justified,51.0
 4118.0,Christopher Stewart James,Male,European-American/White,Brownwood,TX,Medical emergency,Unreported,38.0
 4119.0,Jarrell Walker,Male,African-American/Black,St. Petersburg,FL,Gunshot,Unreported,19.0
@@ -5476,7 +5466,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 4378.0,Venina Linder-Wright,Female,African-American/Black,Cleveland,OH,Vehicle,Unreported,37.0
 18851.0,Boyd Lee Reinhardt,Male,European-American/White,Gaffney,SC,Gunshot,Suicide,24.0
 21746.0,John Bartolett,Male,European-American/White,West Deptford,NJ,Gunshot,Grand jury/No bill or Cleared,49.0
-4379.0,Saun Keith Perkins-Wilford,Male,African-American/Black,,MS,Vehicle,Accidental,33.0
 4380.0,Daniel Barragan,Male,Hispanic/Latino,Van Nuys,CA,Gunshot,Unreported,19.0
 4381.0,Carl Denver Mitchell,Male,African-American/Black,Austin,TX,Drowned,Accidental,36.0
 4382.0,Name withheld by police,Male,Race unspecified,Westlake,LA,Gunshot,Unreported,33.0
@@ -6620,7 +6609,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 5263.0,Melvin Lee Hilliard Jr.,Male,African-American/Black,Los Angeles,CA,Gunshot,Unreported,21.0
 19989.0,Jeffrey L. McKnight,Male,African-American/Black,Reading,PA,Gunshot,Suicide,56.0
 5264.0,Jonathan Michael Ray,Male,African-American/Black,San Diego,CA,Gunshot,Justified,22.0
-5265.0,Name withheld by police,Male,Race unspecified,,GA,Gunshot,Unreported,33.0
 5266.0,Thomas Edward Strong,Male,European-American/White,Caldwell,TX,Gunshot,Justified,51.0
 18927.0,Anthony Twan Prophet,Male,African-American/Black,Columbia,SC,Gunshot,Suicide,30.0
 5267.0,Vitaliy Nikolayevich Pugash,Male,Race unspecified,Monterey Park,CA,Vehicle,Unreported,18.0
@@ -6770,7 +6758,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 21849.0,Horace Wiggins,Male,European-American/White,Bernards,NJ,Gunshot,Suicide,75.0
 22577.0,James H. Sears,Male,European-American/White,Colonial Heights,VA,Vehicle,Criminal,38.0
 5380.0,Mark E. Taylor,Male,African-American/Black,Aurora,CO,Gunshot,Unreported,46.0
-5381.0,Juan Antonio Lozano,Male,Hispanic/Latino,,TX,Undetermined,Unreported,26.0
 5382.0,Ann Lynette (Snow) Marx,Female,European-American/White,Falls City,NE,Gunshot,Grand jury/No bill or Cleared,52.0
 5383.0,Alfonso Rodriguez,Male,Hispanic/Latino,San Antonio,TX,Undetermined,Ruled suicide,49.0
 5384.0,Steffan Day,Male,European-American/White,Bay Point,CA,Gunshot,Unreported,17.0
@@ -7681,7 +7668,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 6089.0,Pedro Renteria,Male,Hispanic/Latino,Torrance,CA,Gunshot,Unreported,21.0
 23075.0,Willie Norwood,Male,African-American/Black,Memphis,TN,Gunshot,Justified,35.0
 6090.0,Joshua Beasley,Male,European-American/White,Boynton Beach,FL,Gunshot,Justified,25.0
-6091.0,Michael S. McCarter Ulery,Male,European-American/White,,KS,Vehicle,Unreported,28.0
 6092.0,Jeremy Scott Beasley,Male,European-American/White,Pauls Valley,OK,Gunshot,Justified,31.0
 6093.0,Jesse Cochran,Male,European-American/White,Midvale,UT,Gunshot,Justified,26.0
 21153.0,Name withheld by police,Male,Race unspecified,Detroit,MI,Vehicle,Unreported,0.17
@@ -7706,7 +7692,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 6107.0,Luis Felipe Sanchez,Male,Hispanic/Latino,Rohnert Park,CA,Gunshot,Justified,27.0
 6108.0,James R. Cofield,Male,European-American/White,Malta,IL,Gunshot,Justified,39.0
 6109.0,Erin L. Jones,Female,European-American/White,Dodge City,KS,Gunshot,Officer indicted/Guilty,31.0
-6110.0,Albert Salazar,Male,Hispanic/Latino,,TX,Stabbed,Ruled suicide,36.0
 6111.0,"Roosevelt ""Bo"" Wilson",Male,African-American/Black,Pickens,MS,Gunshot,Justified,79.0
 6112.0,Gerardo Diaz,Male,Hispanic/Latino,Dallas,TX,Gunshot,Justified,46.0
 6113.0,Daniel Bradley Young,Male,European-American/White,Seminole,FL,Tasered,Justified,33.0
@@ -9206,7 +9191,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 7321.0,Michael Lashon Honey,Male,European-American/White,Snow Hill,NC,Gunshot,Justified,32.0
 7322.0,Montellis Clark,Male,African-American/Black,Atlanta,GA,Gunshot,Unknown,28.0
 7323.0,William Spradling,Male,European-American/White,Little Rock,AR,Gunshot,Unknown,24.0
-7324.0,Domaciano Valerio-Armendariz,Male,European-American/White,,KS,Vehicle,Unreported,54.0
 7325.0,Spencer Parris,Male,European-American/White,New York City,NY,Gunshot,Unreported,39.0
 23103.0,Lakeisha White,Female,African-American/Black,Murfreesboro,TN,Vehicle,Officer indicted/Acquitted,11.0
 7326.0,Andres Avelino Cid-Velasco,Male,Hispanic/Latino,Brawley,CA,Drowned,Unreported,40.0
@@ -9224,12 +9208,10 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 7337.0,Lesley Xavier Allen,Male,African-American/Black,Oakland,CA,Gunshot,Justified,21.0
 7342.0,Daryl Ray Wilson,Male,African-American/Black,Warr Acres,OK,Gunshot,Suicide,18.0
 19752.0,Dean Christopher Sapon,Male,European-American/White,Morganfield,KY,Gunshot,Suicide,40.0
-7338.0,John Michael Clark,Male,European-American/White,,TX,Gunshot,Ruled suicide,55.0
 7339.0,Darry Edward Waters,Male,African-American/Black,Jacksonville,FL,Gunshot,Justified,38.0
 21197.0,Name withheld by police,Male,Race unspecified,Detroit,MI,Gunshot,Unreported,33.0
 22714.0,Donte Keivon Howlett,Male,African-American/Black,Petersburg,VA,Vehicle,Civil suit/Family awarded money,18.0
 22715.0,Javon Donta Butts,Male,African-American/Black,Petersburg,VA,Vehicle,Unreported,19.0
-7340.0,Fenley B. Allen,Male,African-American/Black,,TX,Medical emergency,Unreported,45.0
 7341.0,Kevin Wicks,Male,African-American/Black,Inglewood,CA,Gunshot,Unreported,38.0
 20608.0,Dion Joel Mueller,Male,European-American/White,Sheboygan,WI,Vehicle,Unreported,19.0
 7343.0,David Jeffery Bauman,Male,European-American/White,Frederick,MD,Gunshot,Justified,52.0
@@ -10070,7 +10052,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 8001.0,Ginette Denize,Female,Race unspecified,Brooklyn,NY,Gunshot,Unreported,48.0
 8002.0,Fausto Manzera,Male,Hispanic/Latino,Chicago,IL,Vehicle,Criminal,21.0
 8003.0,Andrew Cazares,Male,Hispanic/Latino,Chicago,IL,Vehicle,Criminal,23.0
-8004.0,Name withheld by police,Male,Race unspecified,,AR,Gunshot,Unreported,41.0
 19148.0,Christopher Chance Allen,Male,European-American/White,Lawton,OK,Gunshot,Suicide,30.0
 20424.0,Charles Smith,Male,European-American/White,Bristol,PA,Gunshot,Other justified (Civilian board/Prosecutor/District Attorney/Coroner),69.0
 22418.0,Jose Waidestran aka Jose Sanchez,Male,Hispanic/Latino,Indianapolis,IN,Gunshot,Justified,27.0
@@ -10389,7 +10370,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 8241.0,James Lewis Slater Jr.,Male,European-American/White,Woodinville,WA,Gunshot,Unreported,59.0
 19109.0,Steven Wayne Branham,Male,European-American/White,Loris,SC,Gunshot,Suicide,41.0
 8242.0,Ian Sloan York,Male,European-American/White,Santa Clara,CA,Gunshot,Suicide,21.0
-8243.0,Jonathan Isaac Anzaldua,Male,Hispanic/Latino,,TX,Fell from a height,Unreported,21.0
 8244.0,Juan Buelna Jr.,Male,Hispanic/Latino,Tucson,AZ,Gunshot,Unreported,19.0
 8245.0,Donel Adam Stogner,Male,European-American/White,Holden,LA,Asphyxiated/Restrained,Cleared,42.0
 22405.0,Rick Evans aka Ricky Evans,Male,European-American/White,Terre Haute,IN,Gunshot,Unreported,48.0
@@ -10662,7 +10642,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 21249.0,Julius Allen-Ray Johnson,Male,African-American/Black,Muskegon,MI,Gunshot,Justified,23.0
 8460.0,Jesus Altimirano Cruz,Male,Hispanic/Latino,Salinas,CA,Gunshot,Unreported,29.0
 8461.0,Robert Louis Johnson,Male,African-American/Black,Jacksonville,FL,Gunshot,Unreported,44.0
-19105.0,Name withheld by police,Male,European-American/White,,SC,Gunshot,Suicide,44.0
 8462.0,Adolf Anthony Sanchez Gonzalez,Male,Hispanic/Latino,Anaheim,CA,Gunshot,Justified,21.0
 8463.0,Curtis Watts,Male,European-American/White,Ashland,AL,Gunshot,Unreported,48.0
 8464.0,Jonathan Scott Latham,Male,European-American/White,Breaux Bridge,LA,Gunshot,Unreported,34.0
@@ -11186,7 +11165,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 8871.0,"Andy ""Jip"" Hammond",Male,European-American/White,Ash Fork,AZ,Gunshot,Unreported,43.0
 8872.0,Brian Macias,Male,Hispanic/Latino,Monrovia,CA,Gunshot,Unreported,17.0
 8873.0,Mark Alan Smith,Male,Hispanic/Latino,Fontana,CA,Gunshot,Justified,35.0
-8874.0,Name withheld by police,Male,Hispanic/Latino,,CA,Gunshot,Ruled suicide,33.0
 8875.0,Nathaniel Rowe,Male,African-American/Black,Tulsa,OK,Gunshot,Unreported,26.0
 8876.0,Jed Waits,Male,European-American/White,Frederickson,WA,Gunshot,Unreported,30.0
 8877.0,Jose Banuelos,Male,Hispanic/Latino,Denver,CO,Gunshot,Justified,22.0
@@ -11305,7 +11283,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 22469.0,Chad Berryman,Male,European-American/White,Marion,IN,Drowned,Unreported,33.0
 8967.0,Luis Alfonso Martinez,Male,Hispanic/Latino,El Paso,TX,Undetermined,Unreported,50.0
 8968.0,Bobby L. Stacy,Male,European-American/White,Southwest City,MO,Gunshot,Criminal,26.0
-8969.0,Bobby Lee Manseill Jr.,Male,Race unspecified,,MS,Gunshot,Justified,37.0
 8970.0,Linda Carol Clark,Female,European-American/White,Placerville,CA,Gunshot,Justified,38.0
 8971.0,Wesley Alan Doyle,Male,European-American/White,Cartersville,GA,Gunshot,Unknown,27.0
 8972.0,Miguel Angel Martinez,Male,Hispanic/Latino,Adelanto,CA,Gunshot,Justified,46.0
@@ -12500,7 +12477,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 9921.0,Wayne Martin Jr.,Male,European-American/White,Concord,NH,Gunshot,Justified,29.0
 9922.0,Jason Beller,Male,European-American/White,Bellmore,NY,Gunshot,Unreported,31.0
 20715.0,Daniel LeCleir,Male,European-American/White,De Pere,WI,Gunshot,Unreported,44.0
-9923.0,Todd Bryan Rehkop,Male,European-American/White,,MO,Gunshot,Suicide,41.0
 9924.0,Andrew W. Biddle,Male,European-American/White,Nashville,AR,Vehicle,Accidental,20.0
 9925.0,Lewis Jennings,Male,European-American/White,Lockport,KY,Gunshot,Grand jury/No bill or Cleared,33.0
 19240.0,Alexander Jessie Richardson II,Male,European-American/White,Duncan,OK,Gunshot,Suicide,40.0
@@ -12580,7 +12556,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 9985.0,Paul Goldreyer,Male,Race unspecified,Bronx,NY,Gunshot,Unreported,48.0
 20716.0,James M. Cruckson,Male,European-American/White,Fond du Lac,WI,Gunshot,Suicide,30.0
 9986.0,Jerry Perea,Male,Hispanic/Latino,Albuquerque,NM,Tasered,Justified,38.0
-9987.0,Cesar Delvalle-Gonzalez,Male,Hispanic/Latino,,TX,Gunshot,Ruled suicide,54.0
 9988.0,"Christopher ""Chris"" Jones",Male,European-American/White,Boaz,AL,Gunshot,Justified,25.0
 9989.0,William Mackenzie,Male,European-American/White,Chesapeake,VA,Gunshot,Suicide,52.0
 9990.0,"Patricia Marie ""Pat"" MacKenzie",Female,European-American/White,Chesapeake,VA,Gunshot,Murder/suicide,55.0
@@ -12685,7 +12660,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 10073.0,Timothy James Thomsen,Male,European-American/White,St. Cloud,MN,Vehicle,Unreported,0.0082
 10074.0,Renardo Brownlee,Male,African-American/Black,St. Louis,MO,Gunshot,Unreported,18.0
 10075.0,Andrae Lambert,Male,African-American/Black,Little Rock,AR,Gunshot,Unreported,28.0
-10076.0,Horace Lorenzo Parks,Male,African-American/Black,,GA,Gunshot,Unreported,45.0
 10077.0,Samuel T. Birch,Male,African-American/Black,Toledo,OH,Gunshot,Justified,24.0
 10078.0,Charles Odell Smith,Male,African-American/Black,Upper Marlboro,MD,Gunshot,Unreported,20.0
 10079.0,Lakeith Roland,Male,African-American/Black,Tulsa,OK,Gunshot,Justified,20.0
@@ -12738,7 +12712,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 10118.0,Daryl Podborny,Male,European-American/White,Dublin,CA,Gunshot,Unreported,53.0
 10119.0,Rodrigo Espinoza,Male,Hispanic/Latino,Lake Como,FL,Gunshot,Unreported,22.0
 19268.0,Bradley Allen Musselmann,Male,European-American/White,Myrtle Beach,SC,Vehicle,Unreported,18.0
-10120.0,James Guerra,Male,Hispanic/Latino,,TX,Gunshot,Ruled suicide,33.0
 10121.0,Michael Ferguson,Male,European-American/White,New Orleans,LA,Gunshot,Unreported,45.0
 10122.0,Corey Simpson,Male,African-American/Black,Sunrise,FL,Gunshot,Unreported,21.0
 10123.0,Vashti Seacat,Female,European-American/White,Kingman,KS,Gunshot,Officer indicted/Guilty,34.0
@@ -12908,7 +12881,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 10258.0,"Melvin ""John"" Lavergne",Male,African-American/Black,Ville Platte,LA,Gunshot,Suicide,66.0
 10259.0,Eric Terrell Bradwell,Male,African-American/Black,Lakeland,FL,Gunshot,Unreported,29.0
 10260.0,Flint Farmer,Male,African-American/Black,Chicago,IL,Gunshot,Justified,29.0
-10261.0,Darell Wayne Turner,Male,European-American/White,,TX,Medical emergency,Medical emergency,52.0
 10262.0,Ernest Manuel Duenez Jr.,Male,Hispanic/Latino,Manteca,CA,Gunshot,Justified,34.0
 10263.0,Edilberto Santana,Male,Hispanic/Latino,Miami,FL,Gunshot,Unreported,51.0
 19965.0,Roy Felty,Male,European-American/White,Morgantown,KY,Gunshot,Grand jury/No bill or Cleared,39.0
@@ -13008,7 +12980,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 10337.0,Luis Carlos Silva,Male,Hispanic/Latino,Las Vegas,NV,Gunshot,Justified,54.0
 10338.0,Jesse Priest Salveson,Male,European-American/White,Sheridan,WY,Gunshot,Unknown,24.0
 10339.0,Alfredo Flores-Bravo,Male,Hispanic/Latino,Marysville,CA,Tasered,Accidental,47.0
-10340.0,Cody Russell,Male,European-American/White,,TX,Undetermined,Unreported,29.0
 10341.0,Warren Deris,Male,European-American/White,Metairie,LA,Gunshot,Unreported,52.0
 10359.0,Kelly Thomas,Male,European-American/White,Fullerton,CA,Beaten/Bludgeoned with instrument,Officer indicted/Acquitted,37.0
 19791.0,James Arthur Noble,Male,European-American/White,Vero Beach,FL,Gunshot,Unreported,70.0
@@ -13237,7 +13208,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 10519.0,Kurt Doerbecker,Male,European-American/White,Point Lookout,NY,Gunshot,Unreported,23.0
 23160.0,Michael Ray Rosser,Male,European-American/White,Fairmont,WV,Gunshot,Justified,45.0
 10520.0,Mallory Ruth Scofield,Female,European-American/White,Wichita,KS,Vehicle,Unreported,19.0
-10521.0,Omar Villanueva-Rojas,Male,Hispanic/Latino,,TX,Undetermined,Unreported,22.0
 10522.0,Kirk Evenson,Male,European-American/White,Abilene,KS,Gunshot,Unreported,41.0
 10523.0,Jason Albert Pannell,Male,African-American/Black,Knoxville,TN,Gunshot,Justified,28.0
 10524.0,Tiffany Bishop,Female,European-American/White,Jackson,GA,Gunshot,Unknown,24.0
@@ -13323,7 +13293,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 10592.0,Keith D. Watkins,Male,African-American/Black,Los Angeles,CA,Gunshot,Unreported,40.0
 10593.0,Kenneth Dwayne Martin,Male,European-American/White,Jefferson,GA,Gunshot,Unknown,50.0
 21326.0,Caleb Cannons,Male,European-American/White,Jackson,MI,Gunshot,Suicide,26.0
-10594.0,Leon Earl Stephens,Male,European-American/White,,TX,Burned/Smoke inhalation,Ruled suicide,72.0
 10595.0,Danielle Maudsley,Female,European-American/White,Pinellas Park,FL,Tasered,Justified,20.0
 10596.0,Richard Owen Dean,Male,European-American/White,Longview,TX,Gunshot,Unreported,44.0
 10597.0,Alnur Edwards,Male,African-American/Black,Duluth,GA,Gunshot,Unreported,38.0
@@ -13904,7 +13873,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 11095.0,Sage Happ-Williams,Male,African-American/Black,Decatur,GA,Gunshot,Justified,28.0
 11096.0,Francisco Andres,Male,Hispanic/Latino,Lake Worth,FL,Vehicle,Excusable,39.0
 20788.0,Gregory Demage,Male,European-American/White,Coal Township,PA,Gunshot,Suicide,30.0
-11097.0,Don Cambron,Male,Hispanic/Latino,,CO,Gunshot,Justified,40.0
 11098.0,Name withheld by police,Male,Race unspecified,Philadelphia,PA,Gunshot,Unknown,33.0
 11099.0,Raymond Luther Allen,Male,African-American/Black,Galveston,TX,Tasered,Unreported,34.0
 20787.0,Christopher Chester Buzzatto,Male,European-American/White,West Mifflin,PA,Burned/Smoke inhalation,Unreported,24.0
@@ -13941,7 +13909,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 11123.0,Andres Garcia,Male,Hispanic/Latino,Woodbridge,NJ,Gunshot,Unreported,44.0
 20783.0,John F. Shick,Male,European-American/White,Pittsburgh,PA,Gunshot,Unreported,30.0
 22188.0,Diego Munoz-Colon,Male,Hispanic/Latino,Dover,NJ,Asphyxiated/Restrained,Suicide,46.0
-11124.0,Alexandra Brooke Longoria,Female,Hispanic/Latino,,TX,Vehicle,Unreported,16.0
 26042.0,Brandon Giordano,Male,European-American/White,Oxford,CT,Vehicle,Civil suit/Pending,15.0
 11125.0,Michael D. Thomas,Male,European-American/White,New Madrid,MO,Gunshot,Unreported,26.0
 11126.0,Nancy Van Raes,Female,European-American/White,Hickory Hills,IL,Gunshot,Unreported,49.0
@@ -15654,7 +15621,6 @@ Unique_ID,Subjects_name,Subjects_gender,Subjects_race,Location_of_death_(city),L
 19092.0,Name withheld by police,Male,Race unspecified,Owasso,OK,Gunshot,Suicide,29.0
 27278.0,Jonathan Alvarado,Male,Hispanic/Latino,Westbrook,CT,Gunshot,Justified by State's Attorney,24.0
 12610.0,Virginia Bedrosian,Female,European-American/White,St. Louis,MO,Vehicle,Unreported,87.0
-12611.0,Mary MacGregor-Wolfe,Female,European-American/White,,AZ,Vehicle,Unreported,51.0
 12612.0,Stephen Brent Waters,Male,European-American/White,Dawsonville,GA,Vehicle,Unreported,33.0
 12613.0,Darius Cox,Male,African-American/Black,Stony Creek,VA,Vehicle,Criminal,20.0
 12614.0,Matthew S. Hersl,Male,European-American/White,Baltimore,MD,Vehicle,Unreported,45.0
@@ -28552,7 +28518,6 @@ Weeks",Male,African-American/Black,Buford,GA,Gunshot,Pending investigation,68.0
 28549.0,Name withheld by police,Male,Race unspecified,Summerville,SC,Vehicle,Pending investigation,33.0
 28550.0,Name withheld by police,Male,Race unspecified,Summerville,SC,Vehicle,Pending investigation,33.0
 28551.0,Name withheld by police,Male,Race unspecified,Ashton,ID,Gunshot,Suicide,29.0
-28552.0,Ibrahm Elkahlil Bouaichi,Male,Middle Eastern,,MD,Gunshot,Suicide,33.0
 28543.0,Name withheld by police,Male,Race unspecified,Oakland,CA,Gunshot,Pending investigation,35.0
 28553.0,Sincere Yero Page-El,Male,African-American/Black,Randolph,MN,Vehicle,Pending investigation,40.0
 28554.0,Name withheld by police,Male,Race unspecified,Ontario,CA,Gunshot,Pending investigation,33.0
@@ -28622,4 +28587,3 @@ Weeks",Male,African-American/Black,Buford,GA,Gunshot,Pending investigation,68.0
 28620.0,Yulia Khort,Female,European-American/White,Blaine,MN,Gunshot,Murder/suicide,47.0
 28616.0,Reuben,Male,African-American/Black,Winston-Salem,NC,Vehicle,Pending investigation,14.0
 28621.0,Danny Ray Spence,Male,European-American/White,Bon Aqua,TN,Drowned,Pending investigation,33.0
-,This is a spacer for Fatal Encounters use.,Male,Race unspecified,,,Other,Unreported,33.0

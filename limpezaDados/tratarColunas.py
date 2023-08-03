@@ -21,13 +21,13 @@ def months_to_years(months_str):
         return None
     
 def valoresNulos(file_path):
-
+    
     st.title('Resumo de Valores Nulos da Coluna')
     
     df = pd.read_csv(file_path)
     st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Location_of_death_(state)'].isnull().sum()
+    num_null_values = df['Location_of_death_(city)'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -77,10 +77,14 @@ def drop_colunas(file_path):
 
 def main():
     df = pd.read_csv(file_path)
-    df.dropna(subset=['Location_of_death_(state)'])
-    valoresNulos(file_path)
-    #df['Dispositions/Exclusions_INTERNAL_USE,_NOT_FOR_ANALYSIS'].fillna('Unreported', inplace=True)
+    #df = df[df['Location_of_death_(state)'].notna()]
     #df.to_csv(file_path, index=False)
+    
+    df = df[df['Location_of_death_(city)'].notna()]
+    df.to_csv(file_path, index=False)
+    valoresNulos(file_path)
+    st.write(df['Location_of_death_(city)'].value_counts())
+    #df['Dispositions/Exclusions_INTERNAL_USE,_NOT_FOR_ANALYSIS'].fillna('Unreported', inplace=True)
     st.write(df.columns)
     st.write(df)
     
