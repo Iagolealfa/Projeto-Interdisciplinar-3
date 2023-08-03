@@ -40,27 +40,27 @@ Unemployment: Unemployment rate (percent)
 
 ### Fatal Encounters
 Unique.ID
-Subject.s.age *#
-Subject.s.gender *#
-Subject.s.race * caio
-Subject.s.race.with.imputations * caio
-Imputation.probability DELETE 1
-URL.of.image.of.deceased    DELETE 2
-Date.of.injury.resulting.in.death..month.day.year. DELETE 3
-Location.of.injury..address. DELETE 4
-Location.of.death..city. *#
-Location.of.death..state. *#
-Location.of.death..zip.code. DELETE 5
-Location.of.death..county. DELETE 6
-Full.Address DELETE 7
-Latitude ? DELETE 8
-Longitude ? DELETE 9
-Agency.responsible.for.death DELETE 10
-Cause.of.death *#
-A.brief.description.of.the.circumstances.surrounding.the.death DELETE 11
-Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS *#
-Intentional.Use.of.Force..Developing. DELETE 12
-Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS DELETE 13
+* Subject.s.age: Numérica Discreta
+* Subject.s.gender: Categórica Nominal
+* Subject.s.race: Categórica Nominal
+* Subject.s.race.with.imputations: Categórica Nominal
+Imputation.probability: Numéricas Discreta
+URL.of.image.of.deceased
+Date.of.injury.resulting.in.death..month.day.year.: Numéricas Discreta
+Location.of.injury..address.
+* Location.of.death..city.: Categórica Nominal
+* Location.of.death..state.: Categórica Nominal
+Location.of.death..zip.code.: Numéricas Discreta
+Location.of.death..county.: Categórica Nominal
+Full.Address: Categórica Nominal
+? Latitude: Numéricas Discreta
+? Longitude: Numéricas Discreta
+Agency.responsible.for.death: Categórica Nominal
+* Cause.of.death: Categórica Nominal
+A.brief.description.of.the.circumstances.surrounding.the.death
+* Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS: Categórica Nominal
+* Intentional.Use.of.Force..Developing.: Categórica Nominal
+* Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS: Categórica Nominal
 
 * = coluna será usada no cluster
 ? = pode ser utilizada no cluster
