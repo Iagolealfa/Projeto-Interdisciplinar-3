@@ -44,23 +44,23 @@ Subject.s.age *#
 Subject.s.gender *#
 Subject.s.race * caio
 Subject.s.race.with.imputations * caio
-Imputation.probability DELETE
-URL.of.image.of.deceased    DELETAR
-Date.of.injury.resulting.in.death..month.day.year. DELETE
-Location.of.injury..address. DELETE
+Imputation.probability DELETE 1
+URL.of.image.of.deceased    DELETE 2
+Date.of.injury.resulting.in.death..month.day.year. DELETE 3
+Location.of.injury..address. DELETE 4
 Location.of.death..city. *#
 Location.of.death..state. *#
-Location.of.death..zip.code. DELETE
-Location.of.death..county. DELETE
-Full.Address DELETE
-Latitude ? DELETE
-Longitude ? DELETE
-Agency.responsible.for.death DELETE
+Location.of.death..zip.code. DELETE 5
+Location.of.death..county. DELETE 6
+Full.Address DELETE 7
+Latitude ? DELETE 8
+Longitude ? DELETE 9
+Agency.responsible.for.death DELETE 10
 Cause.of.death *#
-A.brief.description.of.the.circumstances.surrounding.the.death DELETE
+A.brief.description.of.the.circumstances.surrounding.the.death DELETE 11
 Dispositions.Exclusions.INTERNAL.USE..NOT.FOR.ANALYSIS *#
-Intentional.Use.of.Force..Developing. DELETE
-Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS DELETE
+Intentional.Use.of.Force..Developing. DELETE 12
+Symptoms.of.mental.illness..INTERNAL.USE..NOT.FOR.ANALYSIS DELETE 13
 
 * = coluna será usada no cluster
 ? = pode ser utilizada no cluster
