@@ -61,15 +61,10 @@ def deletar_linha_por_valor(file_path, column_name, value):
 
 def main():
     df = pd.read_csv(file_path)
-    unique_death = df['Location_of_death_(state)'].dropna().unique()
-    death_counts = df['Location_of_death_(state)'].value_counts()
-    #df['Location_of_death_(state)'].fillna('Unknown', inplace=True)
-    st.write(df.columns)
-    st.write(death_counts)
-    st.write(unique_death)
+    st.write(df['Dispositions/Exclusions_INTERNAL_USE'].unique())
     st.dataframe(df)
     #df.to_csv(file_path, index=False)
-    valoresNulos(file_path)
+    
     
 if __name__ == '__main__':
     main()
