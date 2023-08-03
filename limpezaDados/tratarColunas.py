@@ -27,7 +27,7 @@ def valoresNulos(file_path):
     df = pd.read_csv(file_path)
     st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Location_of_death_(city)'].isnull().sum()
+    num_null_values = df['Subjects_gender'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -77,16 +77,11 @@ def drop_colunas(file_path):
 
 def main():
     df = pd.read_csv(file_path)
-    #df = df[df['Location_of_death_(state)'].notna()]
-    #df.to_csv(file_path, index=False)
-    
-    df = df[df['Location_of_death_(city)'].notna()]
-    df.to_csv(file_path, index=False)
-    valoresNulos(file_path)
-    st.write(df['Location_of_death_(city)'].value_counts())
-    #df['Dispositions/Exclusions_INTERNAL_USE,_NOT_FOR_ANALYSIS'].fillna('Unreported', inplace=True)
     st.write(df.columns)
-    st.write(df)
+    one_hot_encoded = pd.get_dummies(df, columns=['Subjects_gender'], prefix=['Gender'])
+    one_hot_encoded.to_csv(file_path, index=False)
+    #df.to_csv(file_path, index=False)
+    st.write(one_hot_encoded )
     
     
     
