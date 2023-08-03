@@ -78,7 +78,7 @@ def drop_colunas(file_path):
 def main():
     df = pd.read_csv(file_path)
     st.write(df.columns)
-    one_hot_encoded = pd.get_dummies(df, columns=['Cause_of_death'], prefix=['Cause'])
+    one_hot_encoded = pd.get_dummies(df, columns=['Subjects_race'], prefix=['Race'])
     one_hot_encoded.to_csv(file_path, index=False)
     #df.to_csv(file_path, index=False)
     st.write(one_hot_encoded )
