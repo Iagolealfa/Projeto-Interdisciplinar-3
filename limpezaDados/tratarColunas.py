@@ -47,8 +47,6 @@ def ler_e_renomear_colunas(file_path):
 
     return df
 
-df = ler_e_renomear_colunas(file_path)
-
 
 
 def deletar_linha_por_valor(file_path, column_name, value):
@@ -58,6 +56,8 @@ def deletar_linha_por_valor(file_path, column_name, value):
 
     
     st.dataframe(df)
+
+
 
 def imputar_race(file_path):
     df = pd.read_csv(file_path)
@@ -78,11 +78,9 @@ def drop_colunas(file_path):
 def main():
     drop_colunas(file_path)
     imputar_race(file_path)
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path) 
     st.write(df.columns)
-    st.write(df['Dispositions/Exclusions_INTERNAL_USE'].unique())
-    st.dataframe(df)
-    #df.to_csv(file_path, index=False)
+    
     
     
 if __name__ == '__main__':
