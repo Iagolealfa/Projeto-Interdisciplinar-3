@@ -21,13 +21,13 @@ def months_to_years(months_str):
         return None
     
 def valoresNulos(file_path):
-
+    
     st.title('Resumo de Valores Nulos da Coluna')
     
     df = pd.read_csv(file_path)
     st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Subjects_race'].isnull().sum()
+    num_null_values = df['Location_of_death_(city)'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -47,8 +47,6 @@ def ler_e_renomear_colunas(file_path):
 
     return df
 
-df = ler_e_renomear_colunas(file_path)
-st.dataframe(df)
 
 
 def deletar_linha_por_valor(file_path, column_name, value):
@@ -59,17 +57,38 @@ def deletar_linha_por_valor(file_path, column_name, value):
     
     st.dataframe(df)
 
+
+
+def imputar_race(file_path):
+    df = pd.read_csv(file_path)
+
+    mask = (df['Subjects_race'] == 'Race unspecified') & (df['Subjects_race_with_imputations'].notnull())
+    df.loc[mask, 'Subjects_race'] = df.loc[mask, 'Subjects_race_with_imputations']
+
+    df.to_csv(file_path, index=False)
+
+
+def drop_colunas(file_path):
+    df = pd.read_csv(file_path)
+    colunas_para_apagar = ['Date_(Year)']
+    df = df.drop(columns=colunas_para_apagar)
+
+    df.to_csv(file_path, index=False)
+
 def main():
     df = pd.read_csv(file_path)
-    unique_death = df['Location_of_death_(state)'].dropna().unique()
-    death_counts = df['Location_of_death_(state)'].value_counts()
-    #df['Location_of_death_(state)'].fillna('Unknown', inplace=True)
-    st.write(df.columns)
-    st.write(death_counts)
-    st.write(unique_death)
-    st.dataframe(df)
+    #df = df[df['Location_of_death_(state)'].notna()]
     #df.to_csv(file_path, index=False)
+    
+    df = df[df['Location_of_death_(city)'].notna()]
+    df.to_csv(file_path, index=False)
     valoresNulos(file_path)
+    st.write(df['Location_of_death_(city)'].value_counts())
+    #df['Dispositions/Exclusions_INTERNAL_USE,_NOT_FOR_ANALYSIS'].fillna('Unreported', inplace=True)
+    st.write(df.columns)
+    st.write(df)
+    
+    
     
 if __name__ == '__main__':
     main()
