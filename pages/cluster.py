@@ -18,11 +18,11 @@ def elbow_method(dados):
     dados = data_scaler(dados)
     wcss = []
     clusters_number = 0
-    for i in range(1, 21):
+    for i in range(1, 31):
         kmeans_cartao = KMeans(n_clusters=i, random_state=0)
         kmeans_cartao.fit(dados)
         wcss.append(kmeans_cartao.inertia_)
-    elbow_graph = px.line(x = range(1,21), y = wcss)
+    elbow_graph = px.line(x = range(1,31), y = wcss)
     st.plotly_chart(elbow_graph)
 
 def cluster_maker(dados, clusters_number):
@@ -58,10 +58,11 @@ def mult_D_graph(dados, rotulos, clusters_number):
 
 dados = pd.read_csv('data\\fatal_encounters_dot_org_updated_2.csv')
 dados = dados.values
-dados = dados[:, 6:]
+st.write(dados)
+dados = dados[:, 5:]
 
 st.write(dados)
 elbow_method(dados)
 
-cluster_maker(dados, 9)
+cluster_maker(dados, 22)
 
