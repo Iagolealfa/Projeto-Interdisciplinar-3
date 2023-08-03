@@ -27,7 +27,7 @@ def valoresNulos(file_path):
     df = pd.read_csv(file_path)
     st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Subjects_race'].isnull().sum()
+    num_null_values = df['Location_of_death_(state)'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -70,16 +70,19 @@ def imputar_race(file_path):
 
 def drop_colunas(file_path):
     df = pd.read_csv(file_path)
-    colunas_para_apagar = ['Imputation_probability','URL_of_image_of_deceased','Date_of_injury_resulting_in_death_(month/day/year)','Location_of_injury_(address)','Location_of_death_(zip_code)','Location_of_death_(county)','Full_Address','Latitude','Longitude','Agency_responsible_for_death','A_brief_description_of_the_circumstances_surrounding_the_death','Intentional_Use_of_Force_(Developing)','Symptoms_of_mental_illness?_INTERNAL_USE','_NOT_FOR_ANALYSIS.1','Video','Date&Description','Unique_ID_formula','Unique_identifier_(redundant)']
+    colunas_para_apagar = ['Date_(Year)']
     df = df.drop(columns=colunas_para_apagar)
 
     df.to_csv(file_path, index=False)
 
 def main():
-    drop_colunas(file_path)
-    imputar_race(file_path)
-    df = pd.read_csv(file_path) 
+    df = pd.read_csv(file_path)
+    df.dropna(subset=['Location_of_death_(state)'])
+    valoresNulos(file_path)
+    #df['Dispositions/Exclusions_INTERNAL_USE,_NOT_FOR_ANALYSIS'].fillna('Unreported', inplace=True)
+    #df.to_csv(file_path, index=False)
     st.write(df.columns)
+    st.write(df)
     
     
     
