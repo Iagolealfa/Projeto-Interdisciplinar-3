@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-file_path = "..\\data\\fatal_encounters_dot_org_updated.csv"
+file_path = "..\\data\\fatal_encounters_dot_org_updated_1.csv"
 
 def remove_variation(age_str):
     try:
@@ -27,11 +29,14 @@ def valoresNulos(file_path):
     df = pd.read_csv(file_path)
     st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Subjects_gender'].isnull().sum()
+    num_null_values = df['Cause_of_death'].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
     st.write(f"Número de nulo na coluna: {num_null_values}")
+    
+
+    
 
 def ler_e_renomear_colunas(file_path):
     df = pd.read_csv(file_path)
@@ -74,11 +79,18 @@ def drop_colunas(file_path):
     df = df.drop(columns=colunas_para_apagar)
 
     df.to_csv(file_path, index=False)
-
-def main():
-    ler_e_renomear_colunas(file_path)
+def coluna_others(file_path):
     df = pd.read_csv(file_path)
+    df['Cause_of_death'] = df['Cause_of_death'].apply(lambda x: x if x in ['Gunshot', 'Vehicle', 'Tasered'] else 'Others')
+def main():
+    df = pd.read_csv(file_path)
+    coluna_others(file_path)
+    #df.to_csv("..\\data\\fatal_encounters_tratados.csv", index=False)
     st.write(df.columns)
+    st.write(df['Cause_of_death'].value_counts())
+    st.write(valoresNulos(file_path))
+
+    
     
     
     

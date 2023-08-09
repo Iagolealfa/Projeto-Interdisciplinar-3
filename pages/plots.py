@@ -185,7 +185,26 @@ No gráfico, são apresentados os números de casos em que as vítimas estavam c
 adas em diferentes categorias: armada, desarmada, casos em que não ficou claro se a 
 vítima possuía uma arma ou não, e quando a vítima utilizou um veículo como uma "arma".
     """)
+def porcentagem_coluna():
+    contagem_valores = df['Cause_of_death'].value_counts()
+    
+    porcentagens = (contagem_valores / contagem_valores.sum()) * 100
 
+    
+    plt.figure(figsize=(10, 6))
+    sns.barplot(x=porcentagens.index, y=porcentagens.values)
+    plt.xticks(rotation=45)
+    plt.xlabel('Causa de Morte')
+    plt.ylabel('Porcentagem')
+    plt.title('Porcentagens das Causas de Morte')
+
+    
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    st.pyplot()
+
+    
+    st.write("Tabela de Contagem e Porcentagens:")
+    st.write(pd.DataFrame({'Causa de Morte': contagem_valores.index, 'Contagem': contagem_valores, 'Porcentagem (%)': porcentagens}))
 def runPlots():
     mapPlot()
     causeByRace()
