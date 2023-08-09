@@ -90,14 +90,14 @@ def add_coluna(file_path,file_path_new,name_coluna):
     df2[name_coluna] = df1[name_coluna]
     df2.to_csv("..\\data\\fatal_encounters_tratado.csv", index=False)    
 def main():
-    df = pd.read_csv(file_path)
+    df1 = pd.read_csv(file_path)
     df2=pd.read_csv(file_path_new)
-    
-    st.write(df['Subjects_race'].value_counts())
+    add_coluna(file_path,file_path_new,'Subjects_gender')
+    st.write(df1['Subjects_gender'].value_counts())
 
-    st.write(df2.columns)
+    st.write(df1.columns)
     
-    st.write(valoresNulos(file_path,'Subjects_race'))
+    st.write(valoresNulos(file_path,'Subjects_gender'))
 
     
     
