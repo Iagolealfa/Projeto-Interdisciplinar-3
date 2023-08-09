@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 file_path = "..\\data\\fatal_encounters_dot_org_updated_1.csv"
+file_path_new = "..\\data\\fatal_encounters_tratado.csv"
 
 def remove_variation(age_str):
     try:
@@ -22,14 +23,14 @@ def months_to_years(months_str):
     except:
         return None
     
-def valoresNulos(file_path):
+def valoresNulos(file_path,name_coluna):
     
     st.title('Resumo de Valores Nulos da Coluna')
     
     df = pd.read_csv(file_path)
     st.subheader('Resumo de Valores Nulos da Coluna:')
 
-    num_null_values = df['Cause_of_death'].isnull().sum()
+    num_null_values = df[name_coluna].isnull().sum()
     total_rows = df.shape[0]  
 
     st.write(f"Total de linhas: {total_rows}")
@@ -73,22 +74,30 @@ def imputar_race(file_path):
     df.to_csv(file_path, index=False)
 
 
-def drop_colunas(file_path):
+def drop_colunas(file_path,name_coluna):
     df = pd.read_csv(file_path)
-    colunas_para_apagar = ['Date_(Year)']
+    colunas_para_apagar = [name_coluna]
     df = df.drop(columns=colunas_para_apagar)
 
     df.to_csv(file_path, index=False)
-def coluna_others(file_path):
+def coluna_others(file_path,name_coluna):
     df = pd.read_csv(file_path)
-    df['Cause_of_death'] = df['Cause_of_death'].apply(lambda x: x if x in ['Gunshot', 'Vehicle', 'Tasered'] else 'Others')
+    df[name_coluna] = df[name_coluna].apply(lambda x: x if x in ['Gunshot', 'Vehicle', 'Tasered'] else 'Others')
+    df[name_coluna].to_csv("..\\data\\fatal_encounters_tratado.csv", index=False)
+def add_coluna(file_path,file_path_new,name_coluna):
+    df1 = pd.read_csv(file_path)
+    df2= pd.read_csv(file_path_new)
+    df2[name_coluna] = df1[name_coluna]
+    df2.to_csv("..\\data\\fatal_encounters_tratado.csv", index=False)    
 def main():
     df = pd.read_csv(file_path)
-    coluna_others(file_path)
-    #df.to_csv("..\\data\\fatal_encounters_tratados.csv", index=False)
-    st.write(df.columns)
-    st.write(df['Cause_of_death'].value_counts())
-    st.write(valoresNulos(file_path))
+    df2=pd.read_csv(file_path_new)
+    
+    st.write(df['Subjects_race'].value_counts())
+
+    st.write(df2.columns)
+    
+    st.write(valoresNulos(file_path,'Subjects_race'))
 
     
     
