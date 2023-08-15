@@ -105,6 +105,13 @@ def replace_unspecified_race_with_mode(file_path):
     df.loc[df['Subjects_race'] == 'Race unspecified', 'Subjects_race'] = mode_value
     df.to_csv(file_path, index=False)
 
+def remove_line(file_path):
+    df = pd.read_csv(file_path)
+    
+    if "Subjects_name" in df.columns:
+        df = df[df["Subjects_name"] != "This is a spacer for Fatal Encounters use."]
+        df.to_csv(file_path, index=False)
+        
 
 
 def main():
@@ -117,6 +124,7 @@ def main():
     #add_imputation_control_column(file_path) Comentado pois a coluna ja foi adcionada com o valor nulo
     #imputar_race(file_path) Comentado pois ja foi substituido os Race unspecified por Subjects_race_with_imputations quando possivel
     #replace_unspecified_race_with_mode(file_path) Comentado pois já foi substituido os Race unspecified restantes pela moda
+    remove_line(file_path)
 
     st.write(df1['Subjects_gender'].value_counts())
 
