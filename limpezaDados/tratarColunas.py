@@ -75,7 +75,6 @@ def imputar_race(file_path):
     df.to_csv(file_path, index=False)
 
 
-
 def drop_colunas(file_path,name_coluna):
     df = pd.read_csv(file_path)
     colunas_para_apagar = [name_coluna]
@@ -112,7 +111,62 @@ def remove_line(file_path):
         df = df[df["Subjects_name"] != "This is a spacer for Fatal Encounters use."]
         df.to_csv(file_path, index=False)
         
-
+def state_to_region(file_path):
+    df = pd.read_csv(file_path)
+    state_to_region = {
+    'AL': 'Southeast',
+    'AK': 'West',
+    'AZ': 'Southwest',
+    'AR': 'Southeast',
+    'CA': 'West',
+    'CO': 'West',
+    'CT': 'Northeast',
+    'DE': 'Northeast',
+    'FL': 'Southeast',
+    'GA': 'Southeast',
+    'HI': 'West',
+    'ID': 'West',
+    'IL': 'Midwest',
+    'IN': 'Midwest',
+    'IA': 'Midwest',
+    'KS': 'Midwest',
+    'KY': 'Southeast',
+    'LA': 'Southeast',
+    'ME': 'Northeast',
+    'MD': 'Northeast',
+    'MA': 'Northeast',
+    'MI': 'Midwest',
+    'MN': 'Midwest',
+    'MS': 'Southeast',
+    'MO': 'Midwest',
+    'MT': 'West',
+    'NE': 'Midwest',
+    'NV': 'West',
+    'NH': 'Northeast',
+    'NJ': 'Northeast',
+    'NM': 'Southwest',
+    'NY': 'Northeast',
+    'NC': 'Southeast',
+    'ND': 'Midwest',
+    'OH': 'Midwest',
+    'OK': 'Southwest',
+    'OR': 'West',
+    'PA': 'Northeast',
+    'RI': 'Northeast',
+    'SC': 'Southeast',
+    'SD': 'Midwest',
+    'TN': 'Southeast',
+    'TX': 'Southwest',
+    'UT': 'West',
+    'VT': 'Northeast',
+    'VA': 'Southeast',
+    'WA': 'West',
+    'WV': 'Southeast',
+    'WI': 'Midwest',
+    'WY': 'West'
+}
+    df["Region"] = df["Location_of_death_(state)"].map(state_to_region)
+    df.to_csv(file_path, index=False)
 
 def main():
     df1 = pd.read_csv(file_path)
@@ -124,7 +178,10 @@ def main():
     #add_imputation_control_column(file_path) Comentado pois a coluna ja foi adcionada com o valor nulo
     #imputar_race(file_path) Comentado pois ja foi substituido os Race unspecified por Subjects_race_with_imputations quando possivel
     #replace_unspecified_race_with_mode(file_path) Comentado pois já foi substituido os Race unspecified restantes pela moda
-    remove_line(file_path)
+    #remove_line(file_path) Comentado pois a linha foi deletada
+    state_to_region(file_path)
+    #add_coluna(file_path,file_path_new,"Region") Comentado pois a coluna já foi adcionada
+    add_coluna(file_path,file_path_new,"Subjects_race")
 
     st.write(df1['Subjects_gender'].value_counts())
 
