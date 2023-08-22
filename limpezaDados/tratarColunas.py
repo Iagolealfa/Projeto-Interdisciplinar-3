@@ -198,7 +198,7 @@ def main():
     #one_hot('Cause_of_death','Death')
     st.write(df2)
 
-    st.write(df2['Cause_of_death'].value_counts())
+    #st.write(df2['Cause_of_death'].value_counts())
 
     st.write(df1.columns)
     
