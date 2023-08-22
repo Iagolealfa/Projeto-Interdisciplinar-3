@@ -168,6 +168,16 @@ def state_to_region(file_path):
     df["Region"] = df["Location_of_death_(state)"].map(state_to_region)
     df.to_csv(file_path, index=False)
 
+def one_hot(coluna,prefix):
+    df = pd.read_csv(file_path_new)
+    df_enconded=pd.get_dummies(df, columns=[coluna],prefix=[prefix])
+    df_enconded.to_csv(file_path_new, index=False)
+def corrigir_linha():
+    df=pd.read_csv(file_path_new)
+    unique_value = "Tase"
+    new_value='Tasered'
+    df['Cause_of_death'] = df['Cause_of_death'].replace(unique_value, new_value)
+    df.to_csv(file_path_new, index=False)
 def main():
     df1 = pd.read_csv(file_path)
     df2=pd.read_csv(file_path_new)
@@ -179,11 +189,16 @@ def main():
     #imputar_race(file_path) Comentado pois ja foi substituido os Race unspecified por Subjects_race_with_imputations quando possivel
     #replace_unspecified_race_with_mode(file_path) Comentado pois já foi substituido os Race unspecified restantes pela moda
     #remove_line(file_path) Comentado pois a linha foi deletada
-    state_to_region(file_path)
+    #state_to_region(file_path)
     #add_coluna(file_path,file_path_new,"Region") Comentado pois a coluna já foi adcionada
-    add_coluna(file_path,file_path_new,"Subjects_race")
+    #add_coluna(file_path,file_path_new,"Subjects_race")
+    #one_hot('Region','Region')
+    #one_hot('Subjects_race','Race')
+    #one_hot('Subjects_gender','Gender')
+    #one_hot('Cause_of_death','Death')
+    st.write(df2)
 
-    st.write(df1['Subjects_gender'].value_counts())
+    st.write(df2['Cause_of_death'].value_counts())
 
     st.write(df1.columns)
     
