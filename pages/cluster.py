@@ -7,6 +7,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
 
 
 def data_scaler(dados):
@@ -15,19 +16,16 @@ def data_scaler(dados):
     return scaled_data
 
 def elbow_method(dados):
-    dados = data_scaler(dados)
     wcss = []
     clusters_number = 0
-    for i in range(1, 31):
+    for i in range(1, 8):
         kmeans_cartao = KMeans(n_clusters=i, random_state=0)
         kmeans_cartao.fit(dados)
         wcss.append(kmeans_cartao.inertia_)
-    elbow_graph = px.line(x = range(1,31), y = wcss)
+    elbow_graph = px.line(x = range(1,8), y = wcss)
     st.plotly_chart(elbow_graph)
 
 def cluster_maker(dados, clusters_number):
-    dados = data_scaler(dados)
-
     kmeans_dados = KMeans(n_clusters = clusters_number)
     kmeans_dados.fit(dados)
 
@@ -38,7 +36,7 @@ def cluster_maker(dados, clusters_number):
     if dados.shape[1] == 2:
        two_D_graph(dados, rotulos, centroides, clusters_number)
     elif dados.shape[1] > 2:
-        mult_D_graph(dados, rotulos, clusters_number)
+       dimension_reducer_tsne(dados, rotulos, clusters_number)
 
 def two_D_graph(dados, rotulos, centroides, clusters_number):
     centroids_size = []
@@ -49,20 +47,22 @@ def two_D_graph(dados, rotulos, centroides, clusters_number):
     two_D_graph_3 = go.Figure(data = two_D_graph_1.data + two_D_graph_2.data)
     st.plotly_chart(two_D_graph_3)
 
-def mult_D_graph(dados, rotulos, clusters_number):
+def dimension_reducer_pca(dados, rotulos, clusters_number):
     pca = PCA(n_components=2)
     dados_pca = pca.fit_transform(dados)
     mult_D_graph = px.scatter(x= dados_pca[:,0], y = dados_pca[:,1], color=rotulos)
     st.plotly_chart(mult_D_graph)
 
+def dimension_reducer_tsne(dados, rotulos, clusters_number):
+    tsne = TSNE(n_components=2, random_state=0)
+    data_transformed = tsne.fit_transform(dados)
+    mult_D_graph = px.scatter(x= data_transformed[:,0], y = data_transformed[:,1], color=rotulos)
+    st.plotly_chart(mult_D_graph)
 
-dados = pd.read_csv('data\\fatal_encounters_dot_org_updated_2.csv')
+dados = pd.read_csv('data\\fatal_encounters_tratado.csv')
 dados = dados.values
-st.write(dados)
-dados = dados[:, 5:]
-
 st.write(dados)
 elbow_method(dados)
 
-cluster_maker(dados, 22)
+cluster_maker(dados, 4)
 

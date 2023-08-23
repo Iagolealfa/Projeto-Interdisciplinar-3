@@ -11,7 +11,7 @@ def selectBy(lista_itens):
     return st.selectbox('Selecione uma opção', lista_itens.unique())
 
 def mapPlot():
-    dataframe_fatal_encounters = pd.read_csv('data\\fatal_encounters_dot_org.csv')
+    dataframe_fatal_encounters = pd.read_csv('dataframeSujo\\fatal_encounters_dot_org.csv')
     #Ajustar colunas
     dataframe_fatal_encounters.rename(columns={'Latitude': 'lat'}, inplace=True)
     dataframe_fatal_encounters.rename(columns={'Longitude': 'lon'}, inplace=True)
@@ -39,7 +39,7 @@ def mapPlot():
     """)
 
 def causeByRace():
-    dataframe_fatal_encounters = pd.read_csv('data\\fatal_encounters_dot_org.csv')
+    dataframe_fatal_encounters = pd.read_csv('dataframeSujo\\fatal_encounters_dot_org.csv')
     #Plotagem do histograma
     # Filtra o dataframe para uma raça específica
     
