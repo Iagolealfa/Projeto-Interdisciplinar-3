@@ -54,7 +54,15 @@ def ler_e_renomear_colunas(file_path):
     return df
 
 
-
+def check_nan(df):
+    nan_columns = df.columns[df.isna().any()].tolist()
+    if nan_columns:
+        print("Colunas com valores NaN:")
+        for col in nan_columns:
+            nan_count = df[col].isna().sum()
+            print(f"{col}: {nan_count} valores NaN")
+    else:
+        print("Nenhuma coluna possui valores NaN")
 def deletar_linha_por_valor(file_path, column_name, value):
     df = pd.read_csv(file_path)
 
@@ -167,7 +175,13 @@ def state_to_region(file_path):
 }
     df["Region"] = df["Location_of_death_(state)"].map(state_to_region)
     df.to_csv(file_path, index=False)
-
+def print_rows_with_nan(df):
+    nan_rows = df[df.isna().any(axis=1)]
+    if not nan_rows.empty:
+        print("Linhas com valores NaN:")
+        print(nan_rows)
+    else:
+        print("Nenhuma linha possui valores NaN")
 def one_hot(coluna,prefix):
     df = pd.read_csv(file_path_new)
     df_enconded=pd.get_dummies(df, columns=[coluna],prefix=[prefix])
@@ -178,10 +192,18 @@ def corrigir_linha():
     new_value='Tasered'
     df['Cause_of_death'] = df['Cause_of_death'].replace(unique_value, new_value)
     df.to_csv(file_path_new, index=False)
+def fill_missing_with_mode(df):
+    columns_with_missing = df.columns[df.isna().any()].tolist()
+    for col in columns_with_missing:
+        mode_value = df[col].mode()[0]
+        df[col].fillna(mode_value, inplace=True)
+    df.to_csv(file_path_new, index=False)        
 def main():
     df1 = pd.read_csv(file_path)
     df2=pd.read_csv(file_path_new)
-    
+    fill_missing_with_mode(df2)
+    check_nan(df2)
+    print_rows_with_nan(df2)
     #add_coluna(file_path,file_path_new,'Cause_of_death') Comentado pois a coluna ja foi adcionada 
     #add_coluna(file_path,file_path_new,'Age') Comentado pois a coluna ja foi adcionada 
     #add_coluna(file_path,file_path_new,'Subjects_gender') Comentado pois a coluna ja foi adcionada 

@@ -1216,7 +1216,7 @@ Gunshot,44.0,Female,Northeast,African-American/Black
 Gunshot,24.0,Female,Southeast,African-American/Black
 Gunshot,56.0,Male,Southeast,African-American/Black
 Gunshot,27.0,Male,Southwest,European-American/White
-Gunshot,34.0,Male,,Hispanic/Latino
+Gunshot,34.0,Male,Southeast,Hispanic/Latino
 Gunshot,22.0,Male,Southeast,African-American/Black
 Gunshot,29.0,Male,Southeast,European-American/White
 Gunshot,42.0,Male,Southeast,African-American/Black
@@ -1283,7 +1283,7 @@ Gunshot,55.0,Male,Southeast,African-American/Black
 Gunshot,26.0,Male,Southwest,European-American/White
 Gunshot,45.0,Male,Northeast,African-American/Black
 Gunshot,22.0,Male,Southeast,African-American/Black
-Gunshot,22.0,Male,,African-American/Black
+Gunshot,22.0,Male,Southeast,African-American/Black
 Gunshot,45.0,Male,West,African-American/Black
 Gunshot,30.0,Male,Southwest,European-American/White
 Gunshot,24.0,Male,Midwest,African-American/Black
@@ -1917,7 +1917,7 @@ Gunshot,55.0,Male,West,Asian/Pacific Islander
 Gunshot,18.0,Male,Southeast,European-American/White
 Vehicle,31.0,Male,Southeast,European-American/White
 Gunshot,61.0,Male,Northeast,European-American/White
-Gunshot,31.0,Male,,African-American/Black
+Gunshot,31.0,Male,Southeast,African-American/Black
 Gunshot,47.0,Male,Midwest,European-American/White
 Gunshot,45.0,Male,Midwest,European-American/White
 Others,54.0,Male,West,Hispanic/Latino
@@ -1992,7 +1992,7 @@ Gunshot,24.0,Male,West,Hispanic/Latino
 Gunshot,47.0,Male,Midwest,European-American/White
 Gunshot,57.0,Male,Southeast,European-American/White
 Gunshot,54.0,Male,Midwest,European-American/White
-Gunshot,41.0,Male,,African-American/Black
+Gunshot,41.0,Male,Southeast,African-American/Black
 Gunshot,26.0,Male,West,Hispanic/Latino
 Vehicle,18.0,Female,West,Hispanic/Latino
 Gunshot,31.0,Male,West,Hispanic/Latino
@@ -3009,7 +3009,7 @@ Gunshot,29.0,Male,West,Hispanic/Latino
 Gunshot,38.0,Male,West,European-American/White
 Gunshot,14.0,Male,Southwest,European-American/White
 Others,29.0,Male,Midwest,European-American/White
-Gunshot,23.0,Male,,African-American/Black
+Gunshot,23.0,Male,Southeast,African-American/Black
 Gunshot,47.0,Male,Southwest,European-American/White
 Gunshot,29.0,Male,West,Hispanic/Latino
 Gunshot,28.0,Male,Midwest,African-American/Black
@@ -3103,7 +3103,7 @@ Gunshot,29.0,Male,Northeast,European-American/White
 Gunshot,23.0,Male,West,Hispanic/Latino
 Gunshot,49.0,Male,Northeast,European-American/White
 Gunshot,35.0,Female,West,European-American/White
-Gunshot,23.0,Female,,African-American/Black
+Gunshot,23.0,Female,Southeast,African-American/Black
 Vehicle,14.0,Male,Midwest,European-American/White
 Vehicle,15.0,Male,Southeast,European-American/White
 Vehicle,56.0,Female,Southeast,European-American/White
@@ -3918,7 +3918,7 @@ Gunshot,43.0,Male,Northeast,European-American/White
 Gunshot,31.0,Male,Northeast,Hispanic/Latino
 Gunshot,33.0,Male,West,European-American/White
 Vehicle,60.0,Female,Northeast,European-American/White
-Others,37.0,Male,,African-American/Black
+Others,37.0,Male,Southeast,African-American/Black
 Others,27.0,Male,West,African-American/Black
 Gunshot,31.0,Male,West,Asian/Pacific Islander
 Gunshot,37.0,Male,West,European-American/White
@@ -4527,8 +4527,8 @@ Vehicle,19.0,Male,Southeast,European-American/White
 Vehicle,21.0,Male,Midwest,European-American/White
 Gunshot,18.0,Male,Southwest,Hispanic/Latino
 Gunshot,3.0,Male,Southeast,European-American/White
-Vehicle,7.0,Male,,African-American/Black
-Vehicle,8.0,Female,,African-American/Black
+Vehicle,7.0,Male,Southeast,African-American/Black
+Vehicle,8.0,Female,Southeast,African-American/Black
 Gunshot,22.0,Male,West,African-American/Black
 Gunshot,43.0,Male,Midwest,African-American/Black
 Tasered,22.0,Male,Southwest,Hispanic/Latino
@@ -4685,7 +4685,7 @@ Gunshot,50.0,Male,West,African-American/Black
 Gunshot,40.0,Female,Northeast,European-American/White
 Vehicle,24.0,Male,Midwest,European-American/White
 Gunshot,22.0,Male,Midwest,European-American/White
-Gunshot,33.0,Male,,European-American/White
+Gunshot,33.0,Male,Southeast,European-American/White
 Vehicle,68.0,Female,Midwest,European-American/White
 Tasered,41.0,Male,West,European-American/White
 Others,46.0,Male,West,European-American/White
@@ -4905,7 +4905,7 @@ Gunshot,25.0,Male,Midwest,European-American/White
 Gunshot,42.0,Male,Southeast,African-American/Black
 Gunshot,33.0,Male,West,Asian/Pacific Islander
 Gunshot,22.0,Female,Midwest,European-American/White
-Gunshot,25.0,Male,,African-American/Black
+Gunshot,25.0,Male,Southeast,African-American/Black
 Gunshot,56.0,Male,West,European-American/White
 Gunshot,21.0,Male,Midwest,Native American/Alaskan
 Others,58.0,Male,Southwest,European-American/White
@@ -5201,7 +5201,7 @@ Gunshot,39.0,Male,Midwest,African-American/Black
 Gunshot,45.0,Male,Northeast,European-American/White
 Vehicle,16.0,Male,West,European-American/White
 Gunshot,48.0,Male,Southeast,European-American/White
-Gunshot,43.0,Male,,African-American/Black
+Gunshot,43.0,Male,Southeast,African-American/Black
 Vehicle,58.0,Male,Southeast,African-American/Black
 Vehicle,27.0,Male,Midwest,European-American/White
 Gunshot,35.0,Male,West,Hispanic/Latino
@@ -6042,7 +6042,7 @@ Gunshot,50.0,Male,Southeast,European-American/White
 Gunshot,16.0,Male,Northeast,European-American/White
 Gunshot,33.0,Male,Northeast,European-American/White
 Vehicle,23.0,Male,Midwest,Asian/Pacific Islander
-Gunshot,44.0,Male,,African-American/Black
+Gunshot,44.0,Male,Southeast,African-American/Black
 Gunshot,40.0,Male,Midwest,African-American/Black
 Gunshot,56.0,Female,West,European-American/White
 Gunshot,45.0,Male,Southeast,European-American/White
@@ -6138,7 +6138,7 @@ Gunshot,42.0,Male,West,Hispanic/Latino
 Gunshot,54.0,Male,West,European-American/White
 Gunshot,26.0,Male,West,European-American/White
 Gunshot,28.0,Male,West,Hispanic/Latino
-Others,19.0,Male,,African-American/Black
+Others,19.0,Male,Southeast,African-American/Black
 Gunshot,46.0,Male,West,African-American/Black
 Gunshot,35.0,Male,West,European-American/White
 Gunshot,31.0,Male,Midwest,African-American/Black
@@ -8059,7 +8059,7 @@ Tasered,44.0,Male,Southeast,African-American/Black
 Gunshot,35.0,Male,Southwest,Hispanic/Latino
 Gunshot,24.0,Male,West,African-American/Black
 Others,36.0,Female,West,European-American/White
-Gunshot,25.0,Male,,African-American/Black
+Gunshot,25.0,Male,Southeast,African-American/Black
 Gunshot,5.0,Male,Southwest,European-American/White
 Gunshot,42.0,Male,Northeast,European-American/White
 Gunshot,29.0,Male,Midwest,African-American/Black
@@ -8196,7 +8196,7 @@ Gunshot,40.0,Female,West,European-American/White
 Gunshot,50.0,Male,Southwest,European-American/White
 Others,49.0,Male,Southwest,European-American/White
 Gunshot,33.0,Male,Midwest,European-American/White
-Gunshot,14.0,Male,,African-American/Black
+Gunshot,14.0,Male,Southeast,African-American/Black
 Gunshot,33.0,Male,Northeast,European-American/White
 Gunshot,34.0,Male,Midwest,European-American/White
 Gunshot,22.0,Male,Southwest,Hispanic/Latino
@@ -8511,7 +8511,7 @@ Gunshot,38.0,Male,West,European-American/White
 Gunshot,29.0,Male,West,African-American/Black
 Others,30.0,Male,Southwest,Hispanic/Latino
 Gunshot,32.0,Male,Midwest,European-American/White
-Gunshot,22.0,Male,,African-American/Black
+Gunshot,22.0,Male,Southeast,African-American/Black
 Gunshot,33.0,Male,Northeast,European-American/White
 Gunshot,24.0,Male,Midwest,Hispanic/Latino
 Gunshot,54.0,Male,Southeast,European-American/White
@@ -9033,7 +9033,7 @@ Vehicle,22.0,Male,Southeast,European-American/White
 Vehicle,39.0,Male,Southeast,European-American/White
 Gunshot,23.0,Male,West,European-American/White
 Tasered,27.0,Male,Southeast,African-American/Black
-Gunshot,52.0,Male,,European-American/White
+Gunshot,52.0,Male,Southeast,European-American/White
 Gunshot,21.0,Male,Southeast,Hispanic/Latino
 Gunshot,47.0,Male,Northeast,Hispanic/Latino
 Gunshot,33.0,Male,West,European-American/White
@@ -9559,7 +9559,7 @@ Others,20.0,Male,Southwest,European-American/White
 Gunshot,27.0,Male,Southeast,African-American/Black
 Gunshot,30.0,Male,Midwest,European-American/White
 Gunshot,19.0,Male,Southeast,African-American/Black
-Gunshot,38.0,Male,,European-American/White
+Gunshot,38.0,Male,Southeast,European-American/White
 Gunshot,23.0,Male,Southwest,Hispanic/Latino
 Gunshot,26.0,Male,Southeast,African-American/Black
 Gunshot,47.0,Male,Midwest,European-American/White
@@ -9839,7 +9839,7 @@ Gunshot,23.0,Male,Southeast,African-American/Black
 Gunshot,21.0,Male,Midwest,European-American/White
 Vehicle,20.0,Male,Southeast,European-American/White
 Gunshot,33.0,Male,Southeast,African-American/Black
-Gunshot,36.0,Male,,African-American/Black
+Gunshot,36.0,Male,Southeast,African-American/Black
 Vehicle,23.0,Male,Midwest,Native American/Alaskan
 Gunshot,34.0,Male,Midwest,European-American/White
 Vehicle,41.0,Male,West,European-American/White
@@ -9962,7 +9962,7 @@ Gunshot,29.0,Male,Southwest,Hispanic/Latino
 Gunshot,37.0,Male,Northeast,European-American/White
 Gunshot,33.0,Male,Midwest,African-American/Black
 Gunshot,64.0,Male,West,European-American/White
-Vehicle,20.0,Male,,African-American/Black
+Vehicle,20.0,Male,Southeast,African-American/Black
 Gunshot,53.0,Female,West,European-American/White
 Gunshot,30.0,Male,Northeast,African-American/Black
 Gunshot,18.0,Male,Southeast,African-American/Black
@@ -9971,7 +9971,7 @@ Gunshot,31.0,Male,West,Hispanic/Latino
 Vehicle,34.0,Male,Southeast,European-American/White
 Gunshot,47.0,Male,Southwest,African-American/Black
 Vehicle,29.0,Male,Midwest,European-American/White
-Gunshot,34.0,Male,,African-American/Black
+Gunshot,34.0,Male,Southeast,African-American/Black
 Gunshot,25.0,Male,Southeast,European-American/White
 Gunshot,32.0,Male,West,Hispanic/Latino
 Gunshot,58.0,Male,West,African-American/Black
@@ -10193,7 +10193,7 @@ Gunshot,18.0,Male,Southeast,African-American/Black
 Vehicle,27.0,Male,West,European-American/White
 Vehicle,41.0,Male,West,African-American/Black
 Gunshot,60.0,Male,Southeast,European-American/White
-Gunshot,18.0,Male,,African-American/Black
+Gunshot,18.0,Male,Southeast,African-American/Black
 Vehicle,46.0,Male,Southeast,European-American/White
 Vehicle,36.0,Male,Southeast,African-American/Black
 Vehicle,48.0,Male,Southeast,African-American/Black
@@ -10282,8 +10282,8 @@ Gunshot,31.0,Male,Northeast,European-American/White
 Gunshot,20.0,Male,West,African-American/Black
 Gunshot,21.0,Male,Midwest,European-American/White
 Gunshot,35.0,Male,Southwest,European-American/White
-Gunshot,38.0,Male,,African-American/Black
-Gunshot,25.0,Male,,African-American/Black
+Gunshot,38.0,Male,Southeast,African-American/Black
+Gunshot,25.0,Male,Southeast,African-American/Black
 Gunshot,28.0,Male,Northeast,African-American/Black
 Gunshot,34.0,Male,Midwest,European-American/White
 Gunshot,66.0,Male,Southeast,African-American/Black
@@ -10429,7 +10429,7 @@ Gunshot,34.0,Male,Midwest,European-American/White
 Gunshot,32.0,Male,West,Hispanic/Latino
 Gunshot,29.0,Male,Southwest,African-American/Black
 Gunshot,47.0,Female,West,European-American/White
-Gunshot,27.0,Male,,African-American/Black
+Gunshot,27.0,Male,Southeast,African-American/Black
 Gunshot,36.0,Male,West,African-American/Black
 Vehicle,38.0,Male,Northeast,European-American/White
 Gunshot,36.0,Male,Northeast,African-American/Black
@@ -10583,7 +10583,7 @@ Gunshot,36.0,Male,Southeast,European-American/White
 Gunshot,29.0,Male,Southeast,European-American/White
 Gunshot,31.0,Male,Northeast,European-American/White
 Gunshot,33.0,Male,Midwest,European-American/White
-Gunshot,51.0,Male,,African-American/Black
+Gunshot,51.0,Male,Southeast,African-American/Black
 Gunshot,36.0,Male,West,Hispanic/Latino
 Tasered,38.0,Male,West,European-American/White
 Others,33.0,Male,Southwest,African-American/Black
@@ -10629,7 +10629,7 @@ Vehicle,15.0,Male,Midwest,European-American/White
 Gunshot,27.0,Male,Southeast,European-American/White
 Gunshot,31.0,Male,Southeast,European-American/White
 Gunshot,31.0,Male,West,Hispanic/Latino
-Gunshot,58.0,Male,,African-American/Black
+Gunshot,58.0,Male,Southeast,African-American/Black
 Gunshot,36.0,Male,West,African-American/Black
 Gunshot,39.0,Male,West,European-American/White
 Vehicle,29.0,Male,Midwest,European-American/White
@@ -10755,7 +10755,7 @@ Gunshot,33.0,Male,Southeast,African-American/Black
 Gunshot,25.0,Male,West,European-American/White
 Gunshot,39.0,Male,Southeast,African-American/Black
 Gunshot,25.0,Male,Southeast,European-American/White
-Gunshot,29.0,Male,,African-American/Black
+Gunshot,29.0,Male,Southeast,African-American/Black
 Gunshot,33.0,Male,Southeast,Hispanic/Latino
 Gunshot,45.0,Male,Southeast,European-American/White
 Gunshot,48.0,Female,Southeast,African-American/Black
@@ -10764,7 +10764,7 @@ Gunshot,31.0,Male,Southeast,European-American/White
 Others,34.0,Male,West,European-American/White
 Gunshot,70.0,Male,Midwest,European-American/White
 Gunshot,68.0,Male,Midwest,European-American/White
-Gunshot,23.0,Male,,African-American/Black
+Gunshot,23.0,Male,Southeast,African-American/Black
 Gunshot,43.0,Male,Southeast,European-American/White
 Gunshot,56.0,Male,Northeast,European-American/White
 Gunshot,41.0,Male,Southwest,Hispanic/Latino
@@ -10981,7 +10981,7 @@ Gunshot,34.0,Male,Southeast,African-American/Black
 Gunshot,31.0,Male,Southwest,Hispanic/Latino
 Gunshot,59.0,Male,Southeast,European-American/White
 Gunshot,39.0,Male,Southeast,African-American/Black
-Gunshot,32.0,Male,,African-American/Black
+Gunshot,32.0,Male,Southeast,African-American/Black
 Gunshot,31.0,Male,Southeast,African-American/Black
 Gunshot,49.0,Male,Southeast,African-American/Black
 Gunshot,27.0,Male,Southwest,European-American/White
@@ -12439,8 +12439,8 @@ Others,52.0,Male,Southwest,European-American/White
 Gunshot,30.0,Male,Southeast,African-American/Black
 Gunshot,19.0,Male,Southwest,Hispanic/Latino
 Gunshot,66.0,Male,Southeast,European-American/White
-Gunshot,21.0,Male,,African-American/Black
-Gunshot,19.0,Male,,African-American/Black
+Gunshot,21.0,Male,Southeast,African-American/Black
+Gunshot,19.0,Male,Southeast,African-American/Black
 Gunshot,22.0,Male,Northeast,African-American/Black
 Gunshot,18.0,Male,Southeast,African-American/Black
 Gunshot,22.0,Male,Southeast,African-American/Black
@@ -12727,7 +12727,7 @@ Vehicle,31.0,Male,Southeast,European-American/White
 Tasered,39.0,Male,Southeast,African-American/Black
 Gunshot,31.0,Male,Northeast,African-American/Black
 Gunshot,46.0,Male,West,Asian/Pacific Islander
-Gunshot,18.0,Male,,African-American/Black
+Gunshot,18.0,Male,Southeast,African-American/Black
 Others,27.0,Male,Southwest,Hispanic/Latino
 Gunshot,46.0,Male,Midwest,European-American/White
 Gunshot,33.0,Male,Midwest,European-American/White
@@ -12931,7 +12931,7 @@ Gunshot,63.0,Male,Southeast,European-American/White
 Others,23.0,Male,West,Hispanic/Latino
 Gunshot,18.0,Male,Midwest,African-American/Black
 Gunshot,25.0,Male,Northeast,African-American/Black
-Gunshot,55.0,Male,,African-American/Black
+Gunshot,55.0,Male,Southeast,African-American/Black
 Gunshot,43.0,Male,Southwest,Hispanic/Latino
 Gunshot,54.0,Male,West,European-American/White
 Gunshot,21.0,Male,Midwest,African-American/Black
@@ -13192,7 +13192,7 @@ Gunshot,21.0,Male,Southwest,Hispanic/Latino
 Gunshot,16.0,Male,Midwest,African-American/Black
 Vehicle,43.0,Male,Midwest,European-American/White
 Gunshot,21.0,Male,Southeast,African-American/Black
-Gunshot,33.0,Male,,African-American/Black
+Gunshot,33.0,Male,Southeast,African-American/Black
 Others,32.0,Male,West,European-American/White
 Gunshot,26.0,Male,Southeast,European-American/White
 Tasered,37.0,Male,Southwest,African-American/Black
@@ -13621,7 +13621,7 @@ Gunshot,31.0,Male,Southwest,European-American/White
 Gunshot,42.0,Male,Midwest,European-American/White
 Gunshot,68.0,Male,Midwest,European-American/White
 Gunshot,43.0,Male,West,African-American/Black
-Gunshot,20.0,Male,,African-American/Black
+Gunshot,20.0,Male,Southeast,African-American/Black
 Gunshot,23.0,Male,Midwest,African-American/Black
 Gunshot,28.0,Male,Midwest,European-American/White
 Gunshot,28.0,Female,Southwest,European-American/White
@@ -13806,7 +13806,7 @@ Gunshot,29.0,Male,Midwest,African-American/Black
 Gunshot,25.0,Male,Southwest,European-American/White
 Gunshot,26.0,Male,Southeast,European-American/White
 Gunshot,33.0,Male,Southwest,Hispanic/Latino
-Vehicle,19.0,Male,,African-American/Black
+Vehicle,19.0,Male,Southeast,African-American/Black
 Gunshot,17.0,Male,Northeast,African-American/Black
 Gunshot,34.0,Male,Southeast,European-American/White
 Gunshot,33.0,Male,Southwest,European-American/White
@@ -14015,7 +14015,7 @@ Gunshot,40.0,Male,Midwest,African-American/Black
 Gunshot,19.0,Male,Southwest,European-American/White
 Gunshot,18.0,Male,Southeast,African-American/Black
 Gunshot,21.0,Male,Northeast,African-American/Black
-Gunshot,19.0,Male,,African-American/Black
+Gunshot,19.0,Male,Southeast,African-American/Black
 Gunshot,34.0,Male,Midwest,African-American/Black
 Gunshot,28.0,Male,Midwest,European-American/White
 Vehicle,74.0,Male,Midwest,European-American/White
@@ -14203,7 +14203,7 @@ Gunshot,44.0,Male,Midwest,Hispanic/Latino
 Vehicle,57.0,Female,West,Hispanic/Latino
 Gunshot,43.0,Male,West,European-American/White
 Gunshot,22.0,Male,Northeast,African-American/Black
-Gunshot,41.0,Male,,African-American/Black
+Gunshot,41.0,Male,Southeast,African-American/Black
 Gunshot,25.0,Male,Southwest,African-American/Black
 Gunshot,61.0,Male,West,European-American/White
 Vehicle,27.0,Male,Southeast,African-American/Black
@@ -14289,7 +14289,7 @@ Gunshot,31.0,Male,West,European-American/White
 Gunshot,26.0,Male,Southeast,Hispanic/Latino
 Vehicle,33.0,Male,Midwest,European-American/White
 Gunshot,42.0,Male,Southeast,European-American/White
-Others,38.0,Male,,African-American/Black
+Others,38.0,Male,Southeast,African-American/Black
 Gunshot,32.0,Male,Southeast,European-American/White
 Tasered,41.0,Male,Southeast,European-American/White
 Gunshot,26.0,Male,Southwest,European-American/White
@@ -14680,7 +14680,7 @@ Vehicle,51.0,Male,Southeast,European-American/White
 Gunshot,41.0,Male,Midwest,African-American/Black
 Tasered,43.0,Male,Southeast,African-American/Black
 Gunshot,33.0,Male,Southeast,African-American/Black
-Gunshot,24.0,Male,,African-American/Black
+Gunshot,24.0,Male,Southeast,African-American/Black
 Gunshot,58.0,Male,Northeast,European-American/White
 Gunshot,25.0,Male,West,African-American/Black
 Gunshot,24.0,Male,Southwest,European-American/White
@@ -14964,7 +14964,7 @@ Gunshot,22.0,Male,Southwest,African-American/Black
 Gunshot,31.0,Male,Midwest,African-American/Black
 Gunshot,25.0,Male,West,European-American/White
 Gunshot,21.0,Female,West,European-American/White
-Gunshot,28.0,Male,,African-American/Black
+Gunshot,28.0,Male,Southeast,African-American/Black
 Gunshot,56.0,Male,Southeast,European-American/White
 Gunshot,39.0,Male,West,African-American/Black
 Gunshot,24.0,Male,Midwest,European-American/White
@@ -15658,7 +15658,7 @@ Vehicle,51.0,Female,Southwest,European-American/White
 Vehicle,33.0,Male,Southeast,European-American/White
 Vehicle,20.0,Male,Southeast,African-American/Black
 Vehicle,45.0,Male,Northeast,European-American/White
-Gunshot,34.0,Male,,African-American/Black
+Gunshot,34.0,Male,Southeast,African-American/Black
 Gunshot,25.0,Male,West,Hispanic/Latino
 Gunshot,20.0,Male,Southwest,European-American/White
 Gunshot,23.0,Male,Southwest,European-American/White
@@ -15915,7 +15915,7 @@ Gunshot,37.0,Female,Southeast,European-American/White
 Vehicle,24.0,Male,West,European-American/White
 Gunshot,22.0,Male,West,African-American/Black
 Others,48.0,Male,Northeast,European-American/White
-Gunshot,34.0,Male,,African-American/Black
+Gunshot,34.0,Male,Southeast,African-American/Black
 Gunshot,22.0,Male,Northeast,African-American/Black
 Gunshot,62.0,Male,West,European-American/White
 Others,38.0,Male,Midwest,European-American/White
@@ -16470,7 +16470,7 @@ Gunshot,24.0,Male,Southeast,African-American/Black
 Vehicle,55.0,Female,Southeast,European-American/White
 Gunshot,32.0,Male,West,European-American/White
 Gunshot,39.0,Male,Southeast,African-American/Black
-Gunshot,34.0,Male,,African-American/Black
+Gunshot,34.0,Male,Southeast,African-American/Black
 Gunshot,34.0,Male,West,Hispanic/Latino
 Vehicle,24.0,Male,Midwest,European-American/White
 Vehicle,36.0,Female,Midwest,European-American/White
@@ -16563,7 +16563,7 @@ Vehicle,31.0,Female,Southwest,Hispanic/Latino
 Vehicle,34.0,Male,Southwest,Hispanic/Latino
 Gunshot,37.0,Male,Southeast,European-American/White
 Vehicle,49.0,Male,Northeast,African-American/Black
-Gunshot,34.0,Female,,African-American/Black
+Gunshot,34.0,Female,Southeast,African-American/Black
 Gunshot,24.0,Male,Northeast,African-American/Black
 Vehicle,40.0,Male,Southeast,European-American/White
 Tasered,29.0,Male,Midwest,African-American/Black
@@ -16581,7 +16581,7 @@ Gunshot,49.0,Male,West,African-American/Black
 Vehicle,30.0,Male,Midwest,European-American/White
 Vehicle,19.0,Male,Northeast,African-American/Black
 Gunshot,44.0,Male,Southwest,European-American/White
-Gunshot,28.0,Male,,African-American/Black
+Gunshot,28.0,Male,Southeast,African-American/Black
 Vehicle,34.0,Male,Midwest,African-American/Black
 Gunshot,43.0,Male,Southeast,European-American/White
 Gunshot,55.0,Male,Southeast,European-American/White
@@ -16833,7 +16833,7 @@ Vehicle,49.0,Male,Southwest,European-American/White
 Gunshot,72.0,Male,West,Hispanic/Latino
 Gunshot,23.0,Male,Northeast,African-American/Black
 Gunshot,53.0,Male,Southeast,African-American/Black
-Gunshot,26.0,Male,,African-American/Black
+Gunshot,26.0,Male,Southeast,African-American/Black
 Tasered,38.0,Male,Southeast,African-American/Black
 Gunshot,31.0,Male,Southeast,European-American/White
 Gunshot,30.0,Male,Southwest,Hispanic/Latino
@@ -16868,7 +16868,7 @@ Gunshot,22.0,Male,Midwest,African-American/Black
 Gunshot,49.0,Male,Southeast,European-American/White
 Vehicle,41.0,Male,Southeast,European-American/White
 Gunshot,38.0,Male,Midwest,European-American/White
-Gunshot,19.0,Male,,African-American/Black
+Gunshot,19.0,Male,Southeast,African-American/Black
 Vehicle,24.0,Male,Southwest,European-American/White
 Gunshot,73.0,Male,Southeast,African-American/Black
 Gunshot,20.0,Male,Southwest,European-American/White
@@ -17217,7 +17217,7 @@ Gunshot,51.0,Male,Southeast,European-American/White
 Vehicle,19.0,Male,Southeast,European-American/White
 Gunshot,21.0,Male,Midwest,European-American/White
 Others,28.0,Male,Southwest,African-American/Black
-Vehicle,40.0,Male,,African-American/Black
+Vehicle,40.0,Male,Southeast,African-American/Black
 Vehicle,28.0,Female,Southwest,Hispanic/Latino
 Gunshot,24.0,Male,Southwest,African-American/Black
 Others,30.0,Male,Southeast,European-American/White
@@ -17298,7 +17298,7 @@ Vehicle,36.0,Male,Southeast,Hispanic/Latino
 Gunshot,32.0,Male,Northeast,African-American/Black
 Gunshot,21.0,Male,Northeast,European-American/White
 Gunshot,26.0,Male,Southwest,European-American/White
-Gunshot,19.0,Male,,African-American/Black
+Gunshot,19.0,Male,Southeast,African-American/Black
 Gunshot,34.0,Male,West,Asian/Pacific Islander
 Gunshot,21.0,Male,Midwest,European-American/White
 Gunshot,41.0,Male,Southeast,European-American/White
@@ -17407,7 +17407,7 @@ Vehicle,36.0,Male,Southeast,African-American/Black
 Gunshot,38.0,Male,Northeast,African-American/Black
 Gunshot,24.0,Male,Northeast,African-American/Black
 Vehicle,30.0,Male,Midwest,European-American/White
-Gunshot,33.0,Male,,African-American/Black
+Gunshot,33.0,Male,Southeast,African-American/Black
 Others,48.0,Male,West,European-American/White
 Vehicle,23.0,Male,Midwest,European-American/White
 Gunshot,34.0,Male,Southwest,European-American/White
@@ -18000,7 +18000,7 @@ Gunshot,20.0,Male,Midwest,Asian/Pacific Islander
 Gunshot,23.0,Male,West,African-American/Black
 Gunshot,27.0,Male,Midwest,European-American/White
 Gunshot,28.0,Male,Southwest,Hispanic/Latino
-Vehicle,17.0,Male,,African-American/Black
+Vehicle,17.0,Male,Southeast,African-American/Black
 Vehicle,23.0,Male,Midwest,European-American/White
 Gunshot,19.0,Male,Southwest,African-American/Black
 Gunshot,40.0,Male,Southeast,European-American/White
@@ -18292,7 +18292,7 @@ Gunshot,48.0,Male,West,African-American/Black
 Gunshot,28.0,Male,Northeast,European-American/White
 Vehicle,22.0,Male,Southeast,African-American/Black
 Gunshot,29.0,Male,West,Hispanic/Latino
-Gunshot,36.0,Male,,African-American/Black
+Gunshot,36.0,Male,Southeast,African-American/Black
 Tasered,31.0,Male,Northeast,African-American/Black
 Vehicle,29.0,Female,Southeast,European-American/White
 Gunshot,27.0,Male,West,Hispanic/Latino
@@ -18663,7 +18663,7 @@ Vehicle,23.0,Male,Southeast,European-American/White
 Vehicle,21.0,Male,Southwest,African-American/Black
 Gunshot,47.0,Male,Southeast,European-American/White
 Tasered,40.0,Male,West,Hispanic/Latino
-Gunshot,33.0,Male,,African-American/Black
+Gunshot,33.0,Male,Southeast,African-American/Black
 Gunshot,21.0,Male,Southeast,Asian/Pacific Islander
 Tasered,39.0,Male,West,European-American/White
 Gunshot,35.0,Male,West,Hispanic/Latino
@@ -18799,7 +18799,7 @@ Gunshot,45.0,Male,Southwest,European-American/White
 Gunshot,35.0,Male,West,Asian/Pacific Islander
 Gunshot,42.0,Male,Northeast,European-American/White
 Vehicle,21.0,Female,Southwest,European-American/White
-Vehicle,18.0,Male,,European-American/White
+Vehicle,18.0,Male,Southeast,European-American/White
 Gunshot,31.0,Male,Midwest,European-American/White
 Gunshot,42.0,Male,Southwest,European-American/White
 Gunshot,40.0,Male,Southwest,European-American/White
@@ -18815,7 +18815,7 @@ Gunshot,42.0,Male,West,European-American/White
 Gunshot,59.0,Male,Northeast,European-American/White
 Gunshot,29.0,Male,West,African-American/Black
 Tase,35.0,Male,Southwest,Hispanic/Latino
-,50.0,Female,West,African-American/Black
+Gunshot,50.0,Female,West,African-American/Black
 Gunshot,25.0,Male,Midwest,African-American/Black
 Gunshot,23.0,Male,Southeast,European-American/White
 Gunshot,63.0,Male,Midwest,European-American/White
@@ -18853,7 +18853,7 @@ Vehicle,18.0,Male,West,African-American/Black
 Vehicle,14.0,Male,Southeast,European-American/White
 Gunshot,46.0,Male,Southeast,European-American/White
 Gunshot,42.0,Male,West,European-American/White
-Gunshot,52.0,Male,,European-American/White
+Gunshot,52.0,Male,Southeast,European-American/White
 Gunshot,56.0,Male,Southwest,Hispanic/Latino
 Gunshot,32.0,Male,Southeast,European-American/White
 Gunshot,33.0,Male,West,European-American/White
@@ -18968,7 +18968,7 @@ Gunshot,60.0,Male,West,Hispanic/Latino
 Gunshot,68.0,Male,Southwest,European-American/White
 Gunshot,20.0,Male,Southeast,European-American/White
 Gunshot,25.0,Male,West,European-American/White
-Gunshot,16.0,Male,,African-American/Black
+Gunshot,16.0,Male,Southeast,African-American/Black
 Vehicle,69.0,Male,West,Hispanic/Latino
 Gunshot,38.0,Male,Southwest,European-American/White
 Gunshot,21.0,Male,Southeast,African-American/Black
@@ -19912,7 +19912,7 @@ Vehicle,22.0,Male,Southwest,European-American/White
 Gunshot,49.0,Male,Midwest,Native American/Alaskan
 Gunshot,26.0,Male,Southeast,African-American/Black
 Vehicle,33.0,Male,West,Asian/Pacific Islander
-Gunshot,33.0,Male,,African-American/Black
+Gunshot,33.0,Male,Southeast,African-American/Black
 Gunshot,29.0,Male,Midwest,European-American/White
 Vehicle,23.0,Male,Midwest,European-American/White
 Gunshot,64.0,Male,Southwest,European-American/White
@@ -20017,7 +20017,7 @@ Vehicle,79.0,Male,West,African-American/Black
 Gunshot,33.0,Male,Midwest,European-American/White
 Gunshot,22.0,Male,Northeast,European-American/White
 Vehicle,21.0,Male,Northeast,Hispanic/Latino
-Vehicle,19.0,Female,,African-American/Black
+Vehicle,19.0,Female,Southeast,African-American/Black
 Gunshot,65.0,Male,Southeast,Hispanic/Latino
 Others,33.0,Male,Northeast,African-American/Black
 Gunshot,33.0,Male,Midwest,European-American/White
@@ -20044,13 +20044,13 @@ Gunshot,23.0,Male,Midwest,European-American/White
 Gunshot,37.0,Male,Midwest,European-American/White
 Others,35.0,Male,West,European-American/White
 Others,33.0,Male,West,European-American/White
-Vehicle,25.0,Male,,African-American/Black
+Vehicle,25.0,Male,Southeast,African-American/Black
 Vehicle,21.0,Female,Southeast,African-American/Black
 Vehicle,37.0,Female,Southeast,European-American/White
 Gunshot,39.0,Male,Northeast,African-American/Black
 Vehicle,33.0,Male,Midwest,European-American/White
 Gunshot,24.0,Male,West,European-American/White
-Gunshot,35.0,Male,,African-American/Black
+Gunshot,35.0,Male,Southeast,African-American/Black
 Gunshot,26.0,Male,Southeast,European-American/White
 Vehicle,34.0,Male,West,European-American/White
 Gunshot,33.0,Male,West,Hispanic/Latino
@@ -20102,7 +20102,7 @@ Vehicle,19.0,Male,Southeast,European-American/White
 Gunshot,18.0,Male,Southeast,European-American/White
 Gunshot,33.0,Male,West,Hispanic/Latino
 Gunshot,25.0,Male,West,Hispanic/Latino
-Vehicle,36.0,Male,,African-American/Black
+Vehicle,36.0,Male,Southeast,African-American/Black
 Vehicle,23.0,Male,Southeast,European-American/White
 Vehicle,52.0,Male,Midwest,African-American/Black
 Gunshot,24.0,Male,West,African-American/Black
@@ -20124,7 +20124,7 @@ Gunshot,33.0,Male,Southwest,European-American/White
 Gunshot,50.0,Male,Midwest,African-American/Black
 Gunshot,33.0,Male,Southeast,African-American/Black
 Gunshot,31.0,Male,West,Hispanic/Latino
-Vehicle,65.0,Male,,African-American/Black
+Vehicle,65.0,Male,Southeast,African-American/Black
 Gunshot,33.0,Male,West,African-American/Black
 Gunshot,33.0,Male,Southeast,African-American/Black
 Vehicle,18.0,Male,Southeast,African-American/Black

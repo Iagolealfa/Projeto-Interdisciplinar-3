@@ -2,12 +2,28 @@ import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
+from kmodes.kmodes import KModes
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
+
+def elbow_method_modes(data, max_clusters):
+    distortions = []
+    for n_clusters in range(1, max_clusters + 1):
+        kmodes = KModes(n_clusters=n_clusters, init='Huang', n_init=10, verbose=0)
+        kmodes.fit(data)
+        distortions.append(kmodes.cost_)
+    return distortions
+
+def k_modes_clustering(data, num_clusters):
+    kmodes = KModes(n_clusters=num_clusters, init='Huang', n_init=10, verbose=0)
+    clusters = kmodes.fit_predict(data)
+    return clusters
 
 
 def data_scaler(dados):
@@ -60,9 +76,29 @@ def dimension_reducer_tsne(dados, rotulos, clusters_number):
     st.plotly_chart(mult_D_graph)
 
 dados = pd.read_csv('data\\fatal_encounters_tratado.csv')
-dados = dados.values
-st.write(dados)
-elbow_method(dados)
+colunas=['Cause_of_death','Subjects_gender','Region','Subjects_race']
+dados_categoricos = dados[colunas]
+max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
+distortions = elbow_method_modes(dados_categoricos,max_clusters)
+plt.figure(figsize=(10, 6))
+plt.plot(range(1, max_clusters + 1), distortions, marker='o')
+plt.title("Método do Cotovelo")
+plt.xlabel("Número de Clusters")
+plt.ylabel("Distortion")
+st.subheader("Gráfico do Método do Cotovelo")
+st.pyplot(plt)
 
-cluster_maker(dados, 4)
 
+num_clusters = st.slider("Escolha o Número de Clusters", min_value=1, max_value=max_clusters, value=3)
+
+clusters = k_modes_clustering(dados, num_clusters)
+dados['Cluster'] = clusters
+
+st.subheader("Conjunto de Dados com Resultados da Clusterização")
+st.dataframe(dados)
+
+plt.figure(figsize=(10, 6))
+sns.countplot(x='Cluster', data=dados)
+plt.title("Distribuição dos Clusters")
+st.subheader("Gráfico da Distribuição dos Clusters")
+st.pyplot(plt)
