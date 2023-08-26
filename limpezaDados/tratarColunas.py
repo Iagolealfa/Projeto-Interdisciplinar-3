@@ -197,11 +197,40 @@ def fill_missing_with_mode(df):
     for col in columns_with_missing:
         mode_value = df[col].mode()[0]
         df[col].fillna(mode_value, inplace=True)
-    df.to_csv(file_path_new, index=False)        
+    df.to_csv(file_path_new, index=False)  
+
+def Age_distribuição():
+    df=pd.read_csv(file_path_new)
+    df.sort_values(by='Age', inplace=True)    
+    total_valores = len(df)   
+    intervalo = total_valores // 4 
+    quartil_1 = df['Age'].iloc[0:intervalo]
+    quartil_2 = df['Age'].iloc[intervalo:intervalo*2]
+    quartil_3 = df['Age'].iloc[intervalo*2:intervalo*3]
+    quartil_4 = df['Age'].iloc[intervalo*3:]
+    st.write(quartil_1)
+    st.write(quartil_2)
+    st.write(quartil_3)
+    st.write(quartil_4)
+
+ranges = {
+    (0, 24): '0-24',
+    (25, 33): '25-33',
+    (34, 43): '34-43',
+    (44, 107): '44-107'
+}  
+def mapear_range(valor):
+    for intervalo, range_nome in ranges.items():
+        if intervalo[0] <= valor <= intervalo[1]:
+            return range_nome
+    return "Outros"     
 def main():
     df1 = pd.read_csv(file_path)
     df2=pd.read_csv(file_path_new)
-    fill_missing_with_mode(df2)
+    df2['Age'] = df2['Age'].apply(mapear_range)
+    st.write(df2['Age'])
+    df2.to_csv(file_path_new, index=False) 
+    '''fill_missing_with_mode(df2)
     check_nan(df2)
     print_rows_with_nan(df2)
     #add_coluna(file_path,file_path_new,'Cause_of_death') Comentado pois a coluna ja foi adcionada 
@@ -218,9 +247,9 @@ def main():
     #one_hot('Subjects_race','Race')
     #one_hot('Subjects_gender','Gender')
     #one_hot('Cause_of_death','Death')
-    st.write(df2)
+    st.write(df2)'''
 
-    #st.write(df2['Cause_of_death'].value_counts())
+    Age_distribuição()
 
     st.write(df1.columns)
     

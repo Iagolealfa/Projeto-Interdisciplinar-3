@@ -11,6 +11,8 @@ from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
+from sklearn.metrics import silhouette_samples, silhouette_score
+import matplotlib.pyplot as plt
 
 def elbow_method_modes(data, max_clusters):
     distortions = []
@@ -90,12 +92,13 @@ st.pyplot(plt)
 
 
 num_clusters = st.slider("Escolha o Número de Clusters", min_value=1, max_value=max_clusters, value=3)
-
 clusters = k_modes_clustering(dados, num_clusters)
 dados['Cluster'] = clusters
 
 st.subheader("Conjunto de Dados com Resultados da Clusterização")
 st.dataframe(dados)
+new_file= 'data_cluster.csv'
+dados.to_csv(new_file, index=False)
 
 plt.figure(figsize=(10, 6))
 sns.countplot(x='Cluster', data=dados)
