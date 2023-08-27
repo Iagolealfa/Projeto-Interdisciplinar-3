@@ -79,17 +79,17 @@ def dimension_reducer_tsne(dados, rotulos, clusters_number):
 
 dados = pd.read_csv('data\\fatal_encounters_tratado.csv')
 max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
-'''distortions = elbow_method_modes(dados,max_clusters)
-plt.figure(figsize=(10, 6))
-plt.plot(range(1, max_clusters + 1), distortions, marker='o')
-plt.title("Método do Cotovelo")
-plt.xlabel("Número de Clusters")
-plt.ylabel("Distortion")
-st.subheader("Gráfico do Método do Cotovelo")
-st.pyplot(plt)
+# distortions = elbow_method_modes(dados,max_clusters)
+# plt.figure(figsize=(10, 6))
+# plt.plot(range(1, max_clusters + 1), distortions, marker='o')
+# plt.title("Método do Cotovelo")
+# plt.xlabel("Número de Clusters")
+# plt.ylabel("Distortion")
+# st.subheader("Gráfico do Método do Cotovelo")
+# st.pyplot(plt)
 
 
-num_clusters = st.slider("Escolha o Número de Clusters", min_value=1, max_value=max_clusters, value=3)'''
+# num_clusters = st.slider("Escolha o Número de Clusters", min_value=1, max_value=max_clusters, value=3)
 clusters = k_modes_clustering(dados, 4)
 dados['Cluster'] = clusters
 
