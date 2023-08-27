@@ -175,6 +175,7 @@ def state_to_region(file_path):
 }
     df["Region"] = df["Location_of_death_(state)"].map(state_to_region)
     df.to_csv(file_path, index=False)
+
 def print_rows_with_nan(df):
     nan_rows = df[df.isna().any(axis=1)]
     if not nan_rows.empty:
@@ -182,16 +183,19 @@ def print_rows_with_nan(df):
         print(nan_rows)
     else:
         print("Nenhuma linha possui valores NaN")
-def one_hot(coluna,prefix):
-    df = pd.read_csv(file_path_new)
+
+def one_hot(coluna,prefix,file_path):
+    df = pd.read_csv(file_path)
     df_enconded=pd.get_dummies(df, columns=[coluna],prefix=[prefix])
-    df_enconded.to_csv(file_path_new, index=False)
+    df_enconded.to_csv(file_path, index=False)
+
 def corrigir_linha():
     df=pd.read_csv(file_path_new)
     unique_value = "Tase"
     new_value='Tasered'
     df['Cause_of_death'] = df['Cause_of_death'].replace(unique_value, new_value)
     df.to_csv(file_path_new, index=False)
+
 def fill_missing_with_mode(df):
     columns_with_missing = df.columns[df.isna().any()].tolist()
     for col in columns_with_missing:
@@ -223,16 +227,17 @@ def mapear_range(valor):
     for intervalo, range_nome in ranges.items():
         if intervalo[0] <= valor <= intervalo[1]:
             return range_nome
-    return "Outros"     
+    return "Outros"    
+
 def main():
-    df1 = pd.read_csv(file_path)
-    df2=pd.read_csv(file_path_new)
-    df2['Age'] = df2['Age'].apply(mapear_range)
-    st.write(df2['Age'])
-    df2.to_csv(file_path_new, index=False) 
-    '''fill_missing_with_mode(df2)
-    check_nan(df2)
-    print_rows_with_nan(df2)
+    # df1 = pd.read_csv(file_path)
+    # df2=pd.read_csv(file_path_new)
+    # df2['Age'] = df2['Age'].apply(mapear_range)
+    # st.write(df2['Age'])
+    # df2.to_csv(file_path_new, index=False) 
+    # fill_missing_with_mode(df2)
+    # check_nan(df2)
+    # print_rows_with_nan(df2)
     #add_coluna(file_path,file_path_new,'Cause_of_death') Comentado pois a coluna ja foi adcionada 
     #add_coluna(file_path,file_path_new,'Age') Comentado pois a coluna ja foi adcionada 
     #add_coluna(file_path,file_path_new,'Subjects_gender') Comentado pois a coluna ja foi adcionada 
@@ -247,18 +252,20 @@ def main():
     #one_hot('Subjects_race','Race')
     #one_hot('Subjects_gender','Gender')
     #one_hot('Cause_of_death','Death')
-    st.write(df2)'''
+    # st.write(df2)
+    # Age_distribuição()
+    # st.write(df1.columns)
+    # st.write(valoresNulos(file_path,'Subjects_gender'))
 
-    Age_distribuição()
+    df = pd.read_csv('../data/fatal_encounters_tratado.csv')
+    st.write(df)
+    file_path = '../data/fatal_encounters_one_hot_encoding.csv'
+    
+    for coluna in df.columns:
+        one_hot(coluna,coluna,file_path)
 
-    st.write(df1.columns)
-    
-    st.write(valoresNulos(file_path,'Subjects_gender'))
-
-    
-    
-    
-    
+    df2 = pd.read_csv('../data/fatal_encounters_one_hot_encoding.csv')
+    st.write(df2)
     
 if __name__ == '__main__':
     main()
