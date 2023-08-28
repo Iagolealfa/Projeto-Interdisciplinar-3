@@ -257,15 +257,15 @@ def main():
     # st.write(df1.columns)
     # st.write(valoresNulos(file_path,'Subjects_gender'))
 
-    df = pd.read_csv('../data/fatal_encounters_tratado.csv')
-    st.write(df)
-    file_path = '../data/fatal_encounters_one_hot_encoding.csv'
+    df = pd.read_csv(file_path_new)
+    st.write(df['Region'].value_counts())
+    # file_path = '../data/fatal_encounters_one_hot_encoding.csv'
     
-    for coluna in df.columns:
-        one_hot(coluna,coluna,file_path)
+    # for coluna in df.columns:
+    #     one_hot(coluna,coluna,file_path)
 
-    df2 = pd.read_csv('../data/fatal_encounters_one_hot_encoding.csv')
-    st.write(df2)
+    # df2 = pd.read_csv('../data/fatal_encounters_one_hot_encoding.csv')
+    # st.write(df2)
     
 if __name__ == '__main__':
     main()
