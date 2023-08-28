@@ -230,42 +230,42 @@ def mapear_range(valor):
     return "Outros"    
 
 def main():
-    # df1 = pd.read_csv(file_path)
-    # df2=pd.read_csv(file_path_new)
-    # df2['Age'] = df2['Age'].apply(mapear_range)
-    # st.write(df2['Age'])
-    # df2.to_csv(file_path_new, index=False) 
-    # fill_missing_with_mode(df2)
-    # check_nan(df2)
-    # print_rows_with_nan(df2)
-    #add_coluna(file_path,file_path_new,'Cause_of_death') Comentado pois a coluna ja foi adcionada 
-    #add_coluna(file_path,file_path_new,'Age') Comentado pois a coluna ja foi adcionada 
-    #add_coluna(file_path,file_path_new,'Subjects_gender') Comentado pois a coluna ja foi adcionada 
-    #add_imputation_control_column(file_path) Comentado pois a coluna ja foi adcionada com o valor nulo
-    #imputar_race(file_path) Comentado pois ja foi substituido os Race unspecified por Subjects_race_with_imputations quando possivel
-    #replace_unspecified_race_with_mode(file_path) Comentado pois já foi substituido os Race unspecified restantes pela moda
-    #remove_line(file_path) Comentado pois a linha foi deletada
-    #state_to_region(file_path)
-    #add_coluna(file_path,file_path_new,"Region") Comentado pois a coluna já foi adcionada
-    #add_coluna(file_path,file_path_new,"Subjects_race")
-    #one_hot('Region','Region')
-    #one_hot('Subjects_race','Race')
-    #one_hot('Subjects_gender','Gender')
-    #one_hot('Cause_of_death','Death')
-    # st.write(df2)
-    # Age_distribuição()
-    # st.write(df1.columns)
-    # st.write(valoresNulos(file_path,'Subjects_gender'))
+    df1 = pd.read_csv(file_path)
+    df2=pd.read_csv(file_path_new)
+    df2['Age'] = df2['Age'].apply(mapear_range)
+    st.write(df2['Age'])
+    df2.to_csv(file_path_new, index=False) 
+    fill_missing_with_mode(df2)
+    check_nan(df2)
+    print_rows_with_nan(df2)
+    add_coluna(file_path,file_path_new,'Cause_of_death') Comentado pois a coluna ja foi adcionada 
+    add_coluna(file_path,file_path_new,'Age') Comentado pois a coluna ja foi adcionada 
+    add_coluna(file_path,file_path_new,'Subjects_gender') Comentado pois a coluna ja foi adcionada 
+    add_imputation_control_column(file_path) Comentado pois a coluna ja foi adcionada com o valor nulo
+    imputar_race(file_path) Comentado pois ja foi substituido os Race unspecified por Subjects_race_with_imputations quando possivel
+    replace_unspecified_race_with_mode(file_path) Comentado pois já foi substituido os Race unspecified restantes pela moda
+    remove_line(file_path) Comentado pois a linha foi deletada
+    state_to_region(file_path)
+    add_coluna(file_path,file_path_new,"Region") Comentado pois a coluna já foi adcionada
+    add_coluna(file_path,file_path_new,"Subjects_race")
+    one_hot('Region','Region')
+    one_hot('Subjects_race','Race')
+    one_hot('Subjects_gender','Gender')
+    one_hot('Cause_of_death','Death')
+    st.write(df2)
+    Age_distribuição()
+    st.write(df1.columns)
+    st.write(valoresNulos(file_path,'Subjects_gender'))
 
     df = pd.read_csv(file_path_new)
     st.write(df['Region'].value_counts())
-    # file_path = '../data/fatal_encounters_one_hot_encoding.csv'
+    file_path = '../data/fatal_encounters_one_hot_encoding.csv'
     
-    # for coluna in df.columns:
-    #     one_hot(coluna,coluna,file_path)
+    for coluna in df.columns:
+        one_hot(coluna,coluna,file_path)
 
-    # df2 = pd.read_csv('../data/fatal_encounters_one_hot_encoding.csv')
-    # st.write(df2)
+    df2 = pd.read_csv('../data/fatal_encounters_one_hot_encoding.csv')
+    st.write(df2)
     
 if __name__ == '__main__':
     main()

@@ -28,7 +28,7 @@ def main():
     file_path = "..\\data\\fatal_encounters_dot_org_updated_2.csv"
     df = pd.read_csv(file_path)
 
-    '''st.subheader("Visão Geral do Conjunto de Dados")
+    st.subheader("Visão Geral do Conjunto de Dados")
     st.dataframe(df)
 
     st.subheader("Informações sobre os Tipos de Dados e Valores Nulos")
@@ -65,7 +65,7 @@ def main():
     df.to_csv(file_path, index=False)
     unique_subject_age = df["Age"].dropna().unique()
     st.write(unique_subject_age)
-    st.dataframe(df)'''
+    st.dataframe(df)
     df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
     median_age = df['Age'].median()
     df['Age'].fillna(median_age, inplace=True)
