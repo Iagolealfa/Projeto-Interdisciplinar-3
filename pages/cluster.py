@@ -78,7 +78,7 @@ def dimension_reducer_tsne(dados, rotulos, clusters_number):
     st.plotly_chart(mult_D_graph)
 
 dados = pd.read_csv('data\\fatal_encounters_tratado.csv')
-max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
+# max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
 # distortions = elbow_method_modes(dados,max_clusters)
 # plt.figure(figsize=(10, 6))
 # plt.plot(range(1, max_clusters + 1), distortions, marker='o')
@@ -90,13 +90,13 @@ max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método d
 
 
 # num_clusters = st.slider("Escolha o Número de Clusters", min_value=1, max_value=max_clusters, value=3)
-clusters = k_modes_clustering(dados, 4)
+clusters = k_modes_clustering(dados, 5)
 dados['Cluster'] = clusters
 
 st.subheader("Conjunto de Dados com Resultados da Clusterização")
 st.dataframe(dados)
 new_file= 'data_cluster.csv'
-dados.to_csv(new_file, index=False)
+#dados.to_csv(new_file, index=False)
 
 plt.figure(figsize=(10, 6))
 sns.countplot(x='Cluster', data=dados)
