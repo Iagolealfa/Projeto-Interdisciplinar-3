@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title = "Porcos Fascistas",
+    page_title = "CIA",
     menu_items = {
         'About': "TESTE DO ABOUT"
     }
