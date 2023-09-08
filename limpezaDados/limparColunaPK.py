@@ -60,9 +60,18 @@ def FleeingCases(file_path):
     df['Fleeing'] = df['Fleeing'].str.replace(r'not fleeing', 'Not fleeing', case=False)
     df.to_csv(file_path, index=False)
 
+
+def correcaoCase(file_path,coluna,nomeOut,nomeIn):
+    df = pd.read_csv(file_path)
+    df[coluna] = df[coluna].str.replace(nomeOut, nomeIn, case=False)
+    df.to_csv(file_path, index=False)
+
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
     Mental_illnessUnknown(file_path)
     substituir_valores_nulos(file_path)
     FleeingCases(file_path)
+    correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='no',nomeIn='No')
+    correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Bystander Video',nomeIn='Yes')
+    correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Surveillance Video',nomeIn='Yes')
