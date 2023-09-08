@@ -34,6 +34,15 @@ def main():
             st.write("Valores Nulos:")
             st.write(resultado['Valores Nulos'])
 
+#tratar Symptoms of mental illness
+
+#tratar Alleged Weapon
+def AgruparWeapon(file_path):
+    df = pd.read_csv(file_path)
+    top_values = df['Alleged Weapon'].value_counts().nlargest(6).index.tolist()
+    df.loc[~df['Alleged Weapon'].isin(top_values), 'Alleged Weapon'] = 'others'
+    df.to_csv(file_path, index=False)
 
 if __name__ == "__main__":
     main()
+    AgruparWeapon(file_path)
