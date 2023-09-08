@@ -40,6 +40,11 @@ def Mental_illnessUnknown(file_path):
     df['Symptoms of mental illness'] = df['Symptoms of mental illness'].str.replace(r'Unkown|unknown', 'Unknown', case=False)
     df.to_csv(file_path, index=False)
 
+def substituir_valores_nulos(file_path):
+    df = pd.read_csv(file_path)
+    df['Symptoms of mental illness'].fillna('Unknown', inplace=True)
+    df.to_csv(file_path, index=False)
+
 #tratar Alleged Weapon
 def AgruparWeapon(file_path):
     df = pd.read_csv(file_path)
@@ -51,3 +56,4 @@ if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
     Mental_illnessUnknown(file_path)
+    substituir_valores_nulos(file_path)
