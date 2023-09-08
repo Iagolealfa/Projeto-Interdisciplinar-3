@@ -52,8 +52,17 @@ def AgruparWeapon(file_path):
     df.loc[~df['Alleged Weapon'].isin(top_values), 'Alleged Weapon'] = 'others'
     df.to_csv(file_path, index=False)
 
+#tratar Fleeing
+def FleeingCases(file_path):
+    df = pd.read_csv(file_path)
+    df['Fleeing'] = df['Fleeing'].str.replace(r'car', 'Car', case=False)
+    df['Fleeing'] = df['Fleeing'].str.replace(r'foot', 'Foot', case=False)
+    df['Fleeing'] = df['Fleeing'].str.replace(r'not fleeing', 'Not fleeing', case=False)
+    df.to_csv(file_path, index=False)
+
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
     Mental_illnessUnknown(file_path)
     substituir_valores_nulos(file_path)
+    FleeingCases(file_path)
