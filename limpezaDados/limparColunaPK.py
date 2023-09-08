@@ -35,6 +35,10 @@ def main():
             st.write(resultado['Valores Nulos'])
 
 #tratar Symptoms of mental illness
+def Mental_illnessUnknown(file_path):
+    df = pd.read_csv(file_path)
+    df['Symptoms of mental illness'] = df['Symptoms of mental illness'].str.replace(r'Unkown|unknown', 'Unknown', case=False)
+    df.to_csv(file_path, index=False)
 
 #tratar Alleged Weapon
 def AgruparWeapon(file_path):
@@ -46,3 +50,4 @@ def AgruparWeapon(file_path):
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
+    Mental_illnessUnknown(file_path)
