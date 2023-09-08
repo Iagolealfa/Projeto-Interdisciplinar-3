@@ -10,11 +10,11 @@ def ler_dataset_e_contar_valores(file_path, colunas):
     for coluna in colunas:
         valores_unicos = df[coluna].unique()
         contagem_valores = df[coluna].value_counts()
-        valores_nulos = df[coluna].isna().sum()  # Conta valores nulos
+        valores_nulos = df[coluna].isna().sum() 
         resultados[coluna] = {
             'Valores Únicos': valores_unicos,
             'Contagem de Valores': contagem_valores,
-            'Valores Nulos': valores_nulos  # Adiciona a contagem de valores nulos
+            'Valores Nulos': valores_nulos  
         }
 
     return resultados
@@ -34,30 +34,16 @@ def main():
             st.write("Valores Nulos:")
             st.write(resultado['Valores Nulos'])
 
-#tratar Symptoms of mental illness
-def Mental_illnessUnknown(file_path):
-    df = pd.read_csv(file_path)
-    df['Symptoms of mental illness'] = df['Symptoms of mental illness'].str.replace(r'Unkown|unknown', 'Unknown', case=False)
-    df.to_csv(file_path, index=False)
 
 def substituir_valores_nulos(file_path):
     df = pd.read_csv(file_path)
     df['Symptoms of mental illness'].fillna('Unknown', inplace=True)
     df.to_csv(file_path, index=False)
 
-#tratar Alleged Weapon
 def AgruparWeapon(file_path):
     df = pd.read_csv(file_path)
     top_values = df['Alleged Weapon'].value_counts().nlargest(6).index.tolist()
     df.loc[~df['Alleged Weapon'].isin(top_values), 'Alleged Weapon'] = 'others'
-    df.to_csv(file_path, index=False)
-
-#tratar Fleeing
-def FleeingCases(file_path):
-    df = pd.read_csv(file_path)
-    df['Fleeing'] = df['Fleeing'].str.replace(r'car', 'Car', case=False)
-    df['Fleeing'] = df['Fleeing'].str.replace(r'foot', 'Foot', case=False)
-    df['Fleeing'] = df['Fleeing'].str.replace(r'not fleeing', 'Not fleeing', case=False)
     df.to_csv(file_path, index=False)
 
 
@@ -69,9 +55,12 @@ def correcaoCase(file_path,coluna,nomeOut,nomeIn):
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
-    Mental_illnessUnknown(file_path)
     substituir_valores_nulos(file_path)
-    FleeingCases(file_path)
+    correcaoCase(file_path=file_path,coluna='Symptoms of mental illness',nomeOut='Unkown',nomeIn='Unknown')
+    correcaoCase(file_path=file_path,coluna='Symptoms of mental illness',nomeOut='unknown',nomeIn='Unknown')
+    correcaoCase(file_path=file_path,coluna='Fleeing',nomeOut='car',nomeIn='Car')
+    correcaoCase(file_path=file_path,coluna='Fleeing',nomeOut='foot',nomeIn='Foot')
+    correcaoCase(file_path=file_path,coluna='Fleeing',nomeOut='not fleeing',nomeIn='Not fleeing')
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='no',nomeIn='No')
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Bystander Video',nomeIn='Yes')
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Surveillance Video',nomeIn='Yes')
