@@ -22,7 +22,7 @@ def ler_dataset_e_contar_valores(file_path, colunas):
 def main():
     st.title("Contagem de Valores em um Dataset")
    
-    colunas = ["Symptoms of mental illness", "Unarmed/Did Not Have an Actual Weapon", "Alleged Weapon", "Fleeing", "Body Camera"]
+    colunas = ["Symptoms of mental illness", "Unarmed/Did Not Have an Actual Weapon", "Alleged Weapon", "Fleeing", "Body Camera","Victims gender","Victims race"]
     if st.button("Contar Valores"):
 
         resultados = ler_dataset_e_contar_valores(file_path, colunas)
@@ -52,6 +52,11 @@ def correcaoCase(file_path,coluna,nomeOut,nomeIn):
     df[coluna] = df[coluna].str.replace(nomeOut, nomeIn, case=False)
     df.to_csv(file_path, index=False)
 
+def nuloModa(file_path,coluna):
+    df = pd.read_csv(file_path)
+    df[coluna].fillna(df[coluna].mode()[0], inplace=True)
+    df.to_csv(file_path, index=False)
+
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
@@ -64,3 +69,4 @@ if __name__ == "__main__":
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='no',nomeIn='No')
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Bystander Video',nomeIn='Yes')
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Surveillance Video',nomeIn='Yes')
+    nuloModa(file_path=file_path,coluna='Victims gender')
