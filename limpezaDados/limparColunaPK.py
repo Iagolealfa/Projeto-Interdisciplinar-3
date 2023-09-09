@@ -35,9 +35,9 @@ def main():
             st.write(resultado['Valores Nulos'])
 
 
-def substituir_valores_nulos(file_path):
+def substituir_valores_nulos(file_path,coluna, valor_substituto):
     df = pd.read_csv(file_path)
-    df['Symptoms of mental illness'].fillna('Unknown', inplace=True)
+    df[coluna].fillna(valor_substituto, inplace=True)
     df.to_csv(file_path, index=False)
 
 def AgruparWeapon(file_path):
@@ -66,7 +66,7 @@ def unknownModa(file_path, coluna):
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
-    substituir_valores_nulos(file_path)
+    substituir_valores_nulos(file_path=file_path,coluna='Symptoms of mental illness',valor_substituto='Unknown')
     correcaoCase(file_path=file_path,coluna='Symptoms of mental illness',nomeOut='Unkown',nomeIn='Unknown')
     correcaoCase(file_path=file_path,coluna='Symptoms of mental illness',nomeOut='unknown',nomeIn='Unknown')
     correcaoCase(file_path=file_path,coluna='Fleeing',nomeOut='car',nomeIn='Car')
@@ -77,3 +77,4 @@ if __name__ == "__main__":
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Surveillance Video',nomeIn='Yes')
     nuloModa(file_path=file_path,coluna='Victims gender')
     unknownModa(file_path=file_path,coluna='Victims gender')
+    substituir_valores_nulos(file_path=file_path,coluna='Fleeing',valor_substituto='Inputed NF')
