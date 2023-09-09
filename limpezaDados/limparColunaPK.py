@@ -57,6 +57,12 @@ def nuloModa(file_path,coluna):
     df[coluna].fillna(df[coluna].mode()[0], inplace=True)
     df.to_csv(file_path, index=False)
 
+def unknownModa(file_path, coluna):
+    dados = pd.read_csv(file_path)
+    moda = dados[coluna].mode()[0]
+    dados[coluna].replace('Unknown', moda, inplace=True)
+    dados.to_csv(file_path, index=False)
+
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
@@ -70,3 +76,4 @@ if __name__ == "__main__":
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Bystander Video',nomeIn='Yes')
     correcaoCase(file_path=file_path,coluna='Body Camera',nomeOut='Surveillance Video',nomeIn='Yes')
     nuloModa(file_path=file_path,coluna='Victims gender')
+    unknownModa(file_path=file_path,coluna='Victims gender')
