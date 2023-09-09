@@ -78,3 +78,4 @@ if __name__ == "__main__":
     nuloModa(file_path=file_path,coluna='Victims gender')
     unknownModa(file_path=file_path,coluna='Victims gender')
     substituir_valores_nulos(file_path=file_path,coluna='Fleeing',valor_substituto='Inputed NF')
+    substituir_valores_nulos(file_path=file_path,coluna='Body Camera',valor_substituto='Inputed No')
