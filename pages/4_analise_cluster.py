@@ -6,7 +6,7 @@ import plotly.express as px
 from prince import MCA
 
 
-clustered_data = pd.read_csv("data_cluster.csv")
+clustered_data = pd.read_csv("data\data_cluster.csv")
 
 
 st.title("Análise dos Clusters")
