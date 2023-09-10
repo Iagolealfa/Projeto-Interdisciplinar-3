@@ -6,16 +6,13 @@ import plotly.express as px
 from prince import MCA
 
 
-clustered_data = pd.read_csv("data\data_cluster.csv")
-
+clustered_data = pd.read_csv("data/data_cluster.csv")
+PK_clustered_data = pd.read_csv("data/PK_cluster.csv")
 
 st.title("Análise dos Clusters")
 
 
-
-
-
-def distribuição_por_cluster(columns):
+def distribuição_por_cluster(columns, clustered_data):
     for col in columns:
         st.subheader(f"Distribuição de {col} por Cluster")
         fig_cat = px.histogram(clustered_data, x=col, color="Cluster", facet_col="Cluster")
@@ -45,11 +42,17 @@ def cluster_similarity(data, clusters):
         title="Matriz de Contingência - Similaridade entre Clusters"
     )
     st.plotly_chart(fig)
+
+
 categorical_columns = ['Age', 'Cause_of_death', 'Subjects_gender', 'Region', 'Subjects_race']
-distribuição_por_cluster(categorical_columns)    
+distribuição_por_cluster(categorical_columns, clustered_data)    
 st.subheader("Visualização Multivariada (MCA)")
 plot_mca(clustered_data.drop('Cluster', axis =1), clustered_data['Cluster'])    
 
 
 st.subheader("Similaridade entre Clusters")
 cluster_similarity(clustered_data, clustered_data['Cluster'])
+
+
+categorical_columns_2 = ["Symptoms of mental illness", "Unarmed/Did Not Have an Actual Weapon", "Alleged Weapon", "Fleeing", "Body Camera","Victims gender","Victims race"]
+distribuição_por_cluster(categorical_columns_2, PK_clustered_data)
