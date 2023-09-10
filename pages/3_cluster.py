@@ -170,23 +170,23 @@ def distribuicao_Cluster(dados):
 
 st.subheader('K-modes')
 
-
+dados = pd.read_csv('data\PK_limpo.csv')
 # max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
 # distortions = elbow_method_modes(dados, max_clusters)
-# x_values=list(range(1,max_clusters +1))
-# fig = go.Figure(dados=go.Scatter(x=x_values, y=distortions, mode='lines+markers'))
 
-# fig.update_layout(
-#     title="Método do Cotovelo",
-#     xaxis_title="Número de Clusters",
-#     yaxis_title="Distortion",
-#     xaxis=dict(tickvals= x_values),
-#     showlegend=False
-# )
 
-# st.subheader("Gráfico do Método do Cotovelo")
+# fig = go.Figure()
+# fig.add_trace(go.Scatter(x=list(range(1, max_clusters + 1)), y=distortions, mode='lines+markers', name='Distorção (Cost)'))
+# fig.update_layout(title='Método do Cotovelo para Encontrar o Número Ideal de Clusters',
+#                     xaxis=dict(title='Número de Clusters'),
+#                     yaxis=dict(title='Distorção (Cost)'))
+
+    
 # st.plotly_chart(fig)
-
+clusters = k_modes_clustering(dados, 4)
+dados['Cluster'] = clusters
+distribuicao_Cluster(dados)
+dados.to_csv('PK_cluster.csv', index=False)
 # st.text('''
 #     Então fizemos uma função que gera os clusters utilizando o k-modes. Então geramso um gráfico de barra que mostra a distribuição 
 #     de cada cluster. Não fizemos um gráfico de distribuição, que normalmente é o melhor tipo de visualização para clusters
@@ -221,10 +221,7 @@ st.subheader('K-modes')
 # plot_silhouette(silhouette_avg, silhouette_values, clusters)
 
 # # Defina cores personalizadas para cada cluster (RGB)
-dados = pd.read_csv('data/fatal_encounters_tratado.csv')
-clusters = k_modes_clustering(dados, 7)
-dados['Cluster'] = clusters
-distribuicao_Cluster(dados)
+
 
 
 
