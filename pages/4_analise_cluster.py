@@ -6,7 +6,7 @@ import plotly.express as px
 from prince import MCA
 
 
-clustered_data = pd.read_csv("data_cluster.csv")
+clustered_data = pd.read_csv("data/data_cluster.csv")
 
 
 st.title("Análise dos Clusters")
@@ -45,6 +45,8 @@ def cluster_similarity(data, clusters):
         title="Matriz de Contingência - Similaridade entre Clusters"
     )
     st.plotly_chart(fig)
+
+
 categorical_columns = ['Age', 'Cause_of_death', 'Subjects_gender', 'Region', 'Subjects_race']
 distribuição_por_cluster(categorical_columns)    
 st.subheader("Visualização Multivariada (MCA)")
