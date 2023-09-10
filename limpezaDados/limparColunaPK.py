@@ -20,38 +20,21 @@ def ler_dataset_e_contar_valores(file_path, colunas):
     return resultados
 
 def main():
-    # st.title("Contagem de Valores em um Dataset")
+    st.title("Contagem de Valores em um Dataset")
    
-    # colunas = ["Symptoms of mental illness", "Unarmed/Did Not Have an Actual Weapon", "Alleged Weapon", "Fleeing", "Body Camera","Victims gender","Victims race"]
-    # if st.button("Contar Valores"):
+    colunas = ["Symptoms of mental illness", "Unarmed/Did Not Have an Actual Weapon", "Alleged Weapon", "Fleeing", "Body Camera","Victims gender","Victims race"]
+    if st.button("Contar Valores"):
 
-    #     resultados = ler_dataset_e_contar_valores(file_path, colunas)
-    #     for coluna, resultado in resultados.items():
-    #         st.write(f"Coluna: {coluna}")
+        resultados = ler_dataset_e_contar_valores(file_path, colunas)
+        for coluna, resultado in resultados.items():
+            st.write(f"Coluna: {coluna}")
             
-    #         st.write("Contagem de Valores:")
-    #         st.write(resultado['Contagem de Valores'])
-    #         st.write("Valores Nulos:")
-    #         st.write(resultado['Valores Nulos'])
+            st.write("Contagem de Valores:")
+            st.write(resultado['Contagem de Valores'])
+            st.write("Valores Nulos:")
+            st.write(resultado['Valores Nulos'])
 
-    resultado = valores_unicos_e_tipos(file_path, 'Alleged Weapon')
-    for valor, tipo in resultado.items():
-        st.write(f"Valor: {valor}, Tipo: {tipo}")
-#     colunas_selecionadas = ['Symptoms of mental illness', 'Unarmed/Did Not Have an Actual Weapon', 'Alleged Weapon','Fleeing','Body Camera','Victims gender','Victims race']
-#     novo_dataset_path = 'data/police_killings_MPV_Cluster.csv'
-#     dtype_dict = {
-#     'Symptoms of mental illness': str, 
-#     'Unarmed/Did Not Have an Actual Weapon': str,
-#     'Alleged Weapon': str,
-#     'Fleeing': str,
-#     'Body Camera': str,
-#     'Victims gender': str,
-#     'Victims race': str,
-    
-# }
-    #criar_novo_dataset(file_path, colunas_selecionadas, novo_dataset_path,dtype_dict)
-    # df= pd.read_csv(file_path)
-    # mostrar_dtypes(colunas_selecionadas, df)
+
 def substituir_valores_nulos(file_path,coluna, valor_substituto):
     df = pd.read_csv(file_path)
     df[coluna].fillna(valor_substituto, inplace=True)
@@ -104,6 +87,7 @@ def unknownModa(file_path, coluna):
     moda = dados[coluna].mode()[0]
     dados[coluna].replace('Unknown', moda, inplace=True)
     dados.to_csv(file_path, index=False)
+
 def criar_novo_dataset(dataset_path, colunas_selecionadas, novo_dataset_path,dtype_dict):
     try:
         
@@ -115,6 +99,13 @@ def criar_novo_dataset(dataset_path, colunas_selecionadas, novo_dataset_path,dty
         print(f"Novo dataset criado com sucesso em {novo_dataset_path}")
     except Exception as e:
         print(f"Ocorreu um erro: {str(e)}")
+
+def criar_novo_csv(file_path, colunas_selecionadas, novo_file_path):
+    df = pd.read_csv(file_path)
+    df_selecionado = df[colunas_selecionadas]
+    df_selecionado.to_csv(novo_file_path, index=False)
+
+    
 if __name__ == "__main__":
     main()
     AgruparWeapon(file_path)
@@ -131,3 +122,4 @@ if __name__ == "__main__":
     unknownModa(file_path=file_path,coluna='Victims gender')
     substituir_valores_nulos(file_path=file_path,coluna='Fleeing',valor_substituto='Inputed NF')
     substituir_valores_nulos(file_path=file_path,coluna='Body Camera',valor_substituto='Inputed No')
+    criar_novo_csv(file_path=file_path,colunas_selecionadas=["Symptoms of mental illness", "Unarmed/Did Not Have an Actual Weapon", "Alleged Weapon", "Fleeing", "Body Camera","Victims gender","Victims race"],novo_file_path="PK_limpo.csv")
