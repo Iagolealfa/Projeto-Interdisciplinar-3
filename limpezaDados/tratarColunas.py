@@ -238,15 +238,15 @@ def main():
     fill_missing_with_mode(df2)
     check_nan(df2)
     print_rows_with_nan(df2)
-    add_coluna(file_path,file_path_new,'Cause_of_death') Comentado pois a coluna ja foi adcionada 
-    add_coluna(file_path,file_path_new,'Age') Comentado pois a coluna ja foi adcionada 
-    add_coluna(file_path,file_path_new,'Subjects_gender') Comentado pois a coluna ja foi adcionada 
-    add_imputation_control_column(file_path) Comentado pois a coluna ja foi adcionada com o valor nulo
-    imputar_race(file_path) Comentado pois ja foi substituido os Race unspecified por Subjects_race_with_imputations quando possivel
-    replace_unspecified_race_with_mode(file_path) Comentado pois já foi substituido os Race unspecified restantes pela moda
-    remove_line(file_path) Comentado pois a linha foi deletada
+    add_coluna(file_path,file_path_new,'Cause_of_death')
+    add_coluna(file_path,file_path_new,'Age') 
+    add_coluna(file_path,file_path_new,'Subjects_gender') 
+    add_imputation_control_column(file_path) 
+    imputar_race(file_path) 
+    replace_unspecified_race_with_mode(file_path) 
+    remove_line(file_path)
     state_to_region(file_path)
-    add_coluna(file_path,file_path_new,"Region") Comentado pois a coluna já foi adcionada
+    add_coluna(file_path,file_path_new,"Region") 
     add_coluna(file_path,file_path_new,"Subjects_race")
     one_hot('Region','Region')
     one_hot('Subjects_race','Race')

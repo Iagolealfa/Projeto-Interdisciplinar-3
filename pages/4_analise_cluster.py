@@ -12,9 +12,6 @@ clustered_data = pd.read_csv("data/data_cluster.csv")
 st.title("Análise dos Clusters")
 
 
-
-
-
 def distribuição_por_cluster(columns):
     for col in columns:
         st.subheader(f"Distribuição de {col} por Cluster")

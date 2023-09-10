@@ -70,9 +70,9 @@ def causeByRace():
 
 def plot_gender_and_weapon_counts():
     df = pd.read_csv("data/police_killings_MPV.csv")
-    gender_counts = df["Victim's gender"].value_counts()
+    gender_counts = df["Victims gender"].value_counts()
     weapon_counts = df["Unarmed/Did Not Have an Actual Weapon"].value_counts()
-    gender_categories = ['Male', 'Female', 'Transgender', 'Unknown']
+    gender_categories = ['Male', 'Female', 'Transgender']
     weapon_categories = ['Allegedly Armed', 'Unarmed', 'Unclear', 'Vehicle']
 
     st.subheader("Gênero das vítimas")

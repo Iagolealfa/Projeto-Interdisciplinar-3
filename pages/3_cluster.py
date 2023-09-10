@@ -14,16 +14,34 @@ from sklearn.metrics import silhouette_samples, silhouette_score
 import matplotlib.pyplot as plt
 from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import LabelEncoder
+import matplotlib.cm as cm
 
 def cluster_and_silhouette(dados, n_clusters):
-    km = KModes(n_clusters=n_clusters, init='Huang', n_init=5, verbose=0)
+    km = KModes(n_clusters=n_clusters, init='Huang', n_init=10, verbose=0)
     clusters = km.fit_predict(dados)
     silhouette_avg = silhouette_score(dados, clusters, metric='hamming')
     return clusters, silhouette_avg
-def plot_silhouette(clusters, silhouette_avg):
-    fig = px.scatter(x=clusters, y=silhouette_avg, labels={'x': 'Clusters', 'y': 'Silhouette Score'})
-    fig.update_layout(title='Gráfico da Silhueta')
-    return fig
+def plot_silhouette(silhouette_avg, silhouette_values, clusters):
+    fig, ax = plt.subplots()
+    y_lower = 10
+    for i in range(clusters):
+        ith_cluster_silhouette_values = silhouette_values[clusters == i]
+        ith_cluster_silhouette_values.sort()
+        size_cluster_i = ith_cluster_silhouette_values.shape[0]
+        y_upper = y_lower + size_cluster_i
+        color = cm.nipy_spectral(float(i) / clusters)
+        ax.fill_betweenx(np.arange(y_lower, y_upper),
+                          0, ith_cluster_silhouette_values,
+                          facecolor=color, edgecolor=color, alpha=0.7)
+        ax.text(-0.05, y_lower + 0.5 * size_cluster_i, str(i))
+        y_lower = y_upper + 10
+
+    ax.axvline(x=silhouette_avg, color="red", linestyle="--")
+    ax.set_yticks([])
+    ax.set_xlabel("Valores de Silhueta")
+    ax.set_ylabel("Rótulos dos Clusters")
+    ax.set_title("Gráfico da Silhueta")
+    st.pyplot(fig)
 def dados_scaler(dados):
     scaler = StandardScaler()
     scaled_dados = scaler.fit_transform(dados)
@@ -86,7 +104,29 @@ def k_modes_clustering(dados, num_clusters):
     kmodes = KModes(n_clusters=num_clusters, init='Huang', n_init=10, verbose=0)
     clusters = kmodes.fit_predict(dados)
     return clusters
+def distribuicao_Cluster(dados):
+    cluster_counts = dados['Cluster'].value_counts()
 
+    
+    colors = ['rgb(131, 201, 255)', 'rgb(0, 104, 201)', 'rgb(255, 171, 171)', 'rgb(255, 43, 43)','rgb(41,176,157)','rgb(80,0,80)','rgb(255,255,0)']
+
+    
+    fig = go.Figure(data=go.Bar(
+        x=cluster_counts.index,
+        y=cluster_counts.values,
+        marker_color=colors
+    ))
+    fig.update_layout(
+        title="Distribuição dos Clusters",
+        xaxis_title="Clusters",
+        yaxis_title="Contagem",
+        xaxis=dict(type='category'),
+        showlegend=False
+    )
+
+    
+    st.subheader("Gráfico da Distribuição dos Clusters")
+    st.plotly_chart(fig)
 # st.title('Clusters')
 # st.subheader('K-maens')
 # st.text('''
@@ -129,81 +169,63 @@ def k_modes_clustering(dados, num_clusters):
 
 
 st.subheader('K-modes')
-dados = pd.read_csv('dados_cluster.csv')
-st.text('''
-    A partir disso fizemos uma função para aplicar o método d cotovelo nos dados utilizando k-modes para podermos saber o número
-    ideal de clusters.
-''')
-encoder = LabelEncoder()
-for column in dados.columns:
-    dados[column] = encoder.fit_transform(dados[column])
 
-# Sidebar para escolher o número de clusters
-n_clusters = st.sidebar.slider('Número de Clusters', min_value=2, max_value=10, value=4)
-
-# Calcular clusters e coeficiente de silhueta
-clusters, silhouette_avg = cluster_and_silhouette(dados, n_clusters)
-
-# Exibir os clusters no Streamlit
-st.write(f'Clusters: {clusters.tolist()}')
-
-# Exibir o coeficiente de silhueta
-st.write(f'Coeficiente de Silhueta: {silhouette_avg:.2f}')
-
+dados = pd.read_csv('data\PK_limpo.csv')
 # max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
 # distortions = elbow_method_modes(dados, max_clusters)
-# x_values=list(range(1,max_clusters +1))
-# fig = go.Figure(dados=go.Scatter(x=x_values, y=distortions, mode='lines+markers'))
 
-# fig.update_layout(
-#     title="Método do Cotovelo",
-#     xaxis_title="Número de Clusters",
-#     yaxis_title="Distortion",
-#     xaxis=dict(tickvals= x_values),
-#     showlegend=False
-# )
 
-# st.subheader("Gráfico do Método do Cotovelo")
+# fig = go.Figure()
+# fig.add_trace(go.Scatter(x=list(range(1, max_clusters + 1)), y=distortions, mode='lines+markers', name='Distorção (Cost)'))
+# fig.update_layout(title='Método do Cotovelo para Encontrar o Número Ideal de Clusters',
+#                     xaxis=dict(title='Número de Clusters'),
+#                     yaxis=dict(title='Distorção (Cost)'))
+
+    
 # st.plotly_chart(fig)
+clusters = k_modes_clustering(dados, 4)
+dados['Cluster'] = clusters
+distribuicao_Cluster(dados)
+dados.to_csv('PK_cluster.csv', index=False)
+# st.text('''
+#     Então fizemos uma função que gera os clusters utilizando o k-modes. Então geramso um gráfico de barra que mostra a distribuição 
+#     de cada cluster. Não fizemos um gráfico de distribuição, que normalmente é o melhor tipo de visualização para clusters
+#     porque, no k-modes os dados são mantidos como categorigos e não transformados em dados binarios utilizando o one hot encoding.
+# ''')
+#st.title('Aplicativo de Clustering com K-Modes e Gráfico da Silhueta')
 
-st.text('''
-    Então fizemos uma função que gera os clusters utilizando o k-modes. Então geramso um gráfico de barra que mostra a distribuição 
-    de cada cluster. Não fizemos um gráfico de distribuição, que normalmente é o melhor tipo de visualização para clusters
-    porque, no k-modes os dados são mantidos como categorigos e não transformados em dados binarios utilizando o one hot encoding.
-''')
+# Carregamento dos dados (substitua 'seu_dataset.csv' pelo nome do seu arquivo de dados)
+# data = pd.read_csv('data\data_cluster.csv')
 
-#num_clusters = st.slider("Escolha o Número de Clusters", min_value=1, max_value=max_clusters, value=3)
-# clusters = k_modes_clustering(dados, 5)
-# dados['Cluster'] = clusters
+# # Codificação dos dados categóricos com LabelEncoder
+# encoder = LabelEncoder()
+# for column in data.columns:
+#     data[column] = encoder.fit_transform(data[column])
+
+# # Sidebar para escolher o número de clusters
+# n_clusters = st.sidebar.slider('Número de Clusters', min_value=2, max_value=10, value=4)
+
+# # Calcular clusters
+# km = KModes(n_clusters=n_clusters, init='Huang', n_init=10, verbose=0)
+# clusters = km.fit_predict(data)
+
+# # Calcular o coeficiente de silhueta
+# silhouette_avg = silhouette_score(data, clusters, metric='hamming')
+# silhouette_values = silhouette_samples(data, clusters, metric='hamming')
+
+# st.write(f'Clusters: {clusters.tolist()}')
+# # Exibir o coeficiente de silhueta
+# st.write(f'Coeficiente de Silhueta: {silhouette_avg:.2f}')
+
+# # Plotar o gráfico da silhueta com Plotly
+# plot_silhouette(silhouette_avg, silhouette_values, clusters)
 
 # # Defina cores personalizadas para cada cluster (RGB)
-# cluster_colors = {
-#     0: 'rgb(131, 201, 255)',
-#     1: 'rgb(0, 104, 201)',
-#     2: 'rgb(255, 171, 171)',
-#     3: 'rgb(255, 43, 43)',
-#     4: 'rgb(41,176,157)'
-# }
 
-# # Contagem dos clusters
-# cluster_counts = dados['Cluster'].value_counts()
 
-# # Criar um gráfico de barras com Plotly e cores personalizadas
-# fig = go.Figure(dados=go.Bar(
-#     x=cluster_counts.index,
-#     y=cluster_counts.values,
-#     marker_color=[cluster_colors[cluster] for cluster in cluster_counts.index]
-# ))
-# fig.update_layout(
-#     title="Distribuição dos Clusters",
-#     xaxis_title="Clusters",
-#     yaxis_title="Contagem",
-#     xaxis=dict(type='category'),
-#     showlegend=False
-# )
 
-# # Exibir o gráfico no Streamlit
-# st.subheader("Gráfico da Distribuição dos Clusters")
-# st.plotly_chart(fig)
+
+
+
 
 
