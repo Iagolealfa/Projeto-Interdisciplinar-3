@@ -136,11 +136,36 @@ def plot_race_by_region():
      gráfico pode fornecer uma ideia de quais regiões podem estar mais propensos a ter
      vítimas fatais em encontros com a polícia. 
      """)
+
+def perfil():
+    st.subheader("Contagem de mortes por perfil")
+    df = pd.read_csv('data/PK_limpo.csv')
+    unique_values = {}
+
+    for col in df.columns:
+        unique_values[col] = st.selectbox(f"Selecione um valor para {col}", df[col].unique())
+
+    if st.button("Gerar Gráfico"):
+        filtered_df = df
+        for col, value in unique_values.items():
+            filtered_df = filtered_df[filtered_df[col] == value]
+
+        count = len(filtered_df)
+
+        fig = px.bar(x=["Perfil"], y=[count], labels={'x': 'Perfil', 'y': 'Contagem'})
+
+        fig.update_traces(marker=dict(line=dict(width=1)))
+
+        fig.update_xaxes(showticklabels=False)
+        
+        st.plotly_chart(fig)
+
 def runPlots():
     mapPlot()
     causeByRace()
     plot_gender_and_weapon_counts()
     plot_race_by_region()
+    perfil()
 
 runPlots()
 

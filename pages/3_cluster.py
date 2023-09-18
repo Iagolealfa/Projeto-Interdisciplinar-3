@@ -123,109 +123,73 @@ def distribuicao_Cluster(dados):
         xaxis=dict(type='category'),
         showlegend=False
     )
-
-    
     st.subheader("Gráfico da Distribuição dos Clusters")
     st.plotly_chart(fig)
-# st.title('Clusters')
-# st.subheader('K-maens')
-# st.text('''
-#     Quando começamos a parte de clusterização acabamos optando pela utilização do k-means, para poder aplicar o k-means criamos 
-#     algumas funções, as primeiras foram o dados_scaler com a função de normalizar os dados, para nenhum se sobre sair em relação
-#     a outro por conta de um valor mais alto e o elbow_method, que utiliza o metodo do cotovelo para determinar a quantidade ideal
-#     de cluster para os nossos dados.
-# ''')
 
-# dados_one_hot = pd.read_csv('dados/fatal_encounters_one_hot_encoding.csv')
-# dados_one_hot = dados_one_hot.values
-# dados_one_hot = dados_scaler(dados_one_hot)
-# elbow_method(dados_one_hot)
 
-# st.text('''
-#     Também implementamos a k_means_clustering junto a mais duas funções: two_D_graph e mult_D_graph
-#     que juntas clusterizavam os dados e plotavam um gráfico de distribuição ou 2D para quando se tinha apenas duas dimensões ou
-#     o multiD que utilizava PCA para reduzir as dimensões dos dados para 2 para poder plotar um gráfico de distribuição.
-# ''')
+st.title('Clusters')
+st.subheader('K-means')
+st.text('''
+    Quando começamos a parte de clusterização acabamos optando pela utilização do k-means, para poder aplicar o k-means criamos 
+    algumas funções, as primeiras foram o dados_scaler com a função de normalizar os dados, para nenhum se sobre sair em relação
+    a outro por conta de um valor mais alto e o elbow_method, que utiliza o metodo do cotovelo para determinar a quantidade ideal
+    de cluster para os nossos dados.
+''')
+
+dados_one_hot = pd.read_csv('data/fatal_encounters_one_hot_encoding.csv')
+dados_one_hot = dados_one_hot.values
+dados_one_hot = dados_scaler(dados_one_hot)
+elbow_method(dados_one_hot)
+
+st.text('''
+    Também implementamos a k_means_clustering junto a mais duas funções: two_D_graph e mult_D_graph
+    que juntas clusterizavam os dados e plotavam um gráfico de distribuição ou 2D para quando se tinha apenas duas dimensões ou
+    o multiD que utilizava PCA para reduzir as dimensões dos dados para 2 para poder plotar um gráfico de distribuição.
+''')
  
-# k_means_clustering(dados_one_hot, 4, 'pca')
+k_means_clustering(dados_one_hot, 4, 'pca')
 
-# st.text('''
-#     Porém achamos que a distribuição e a visualização do gráfico de disperção havia ficado um pouco estranha, e pesquisando mais
-#     descobrimos que o pca não é o ideal para reduzir as dimensionalidades nesse caso, onde temos todos os dados categoricos, nesse
-#     caso o mais ideal seria o tsne, que é outro metodo com o mesmo fim. Além disso, também decidimo por tirar o dados_scaler, pois
-#     não havia sentido em escalonar dados que são todos binarios e isso podia também estar afetando o resultado dos clusters e a 
-#     visaualização do gráfico.
-# ''')
+st.text('''
+    Porém achamos que a distribuição e a visualização do gráfico de disperção havia ficado um pouco estranha, e pesquisando mais
+    descobrimos que o pca não é o ideal para reduzir as dimensionalidades nesse caso, onde temos todos os dados categoricos, nesse
+    caso o mais ideal seria o tsne, que é outro metodo com o mesmo fim. Além disso, também decidimo por tirar o dados_scaler, pois
+    não havia sentido em escalonar dados que são todos binarios e isso podia também estar afetando o resultado dos clusters e a 
+    visaualização do gráfico.
+''')
 
-# dados_one_hot = pd.read_csv('dados/fatal_encounters_one_hot_encoding.csv')
-# dados_one_hot = dados_one_hot.values
-# k_means_clustering(dados_one_hot, 4, 'tsne')
+dados_one_hot = pd.read_csv('data/fatal_encounters_one_hot_encoding.csv')
+dados_one_hot = dados_one_hot.values
+k_means_clustering(dados_one_hot, 4, 'tsne')
 
-# st.text('''
-#     Mas pesquisando um pouco mais afundo, descobrimos que o ideal para dados que possuem muitos valores categorigos, como no nosso
-#     onde todos são categoricos, com exceção da idade, o ideal seria utilizar o K-modes, que é uma variação do K-mean, porém como o
-#     nome diz, ao enves de utilizar média, utiliza moda.
-# ''')
+st.text('''
+    Mas pesquisando um pouco mais afundo, descobrimos que o ideal para dados que possuem muitos valores categorigos, como no nosso
+    onde todos são categoricos, com exceção da idade, o ideal seria utilizar o K-modes, que é uma variação do K-mean, porém como o
+    nome diz, ao enves de utilizar média, utiliza moda.
+''')
 
 
 st.subheader('K-modes')
 
 dados = pd.read_csv('data\PK_limpo.csv')
-# max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
-# distortions = elbow_method_modes(dados, max_clusters)
+max_clusters = st.slider("Escolha o Número Máximo de Clusters para o Método do Cotovelo", min_value=1, max_value=10, value=10)
+distortions = elbow_method_modes(dados, max_clusters)
 
 
-# fig = go.Figure()
-# fig.add_trace(go.Scatter(x=list(range(1, max_clusters + 1)), y=distortions, mode='lines+markers', name='Distorção (Cost)'))
-# fig.update_layout(title='Método do Cotovelo para Encontrar o Número Ideal de Clusters',
-#                     xaxis=dict(title='Número de Clusters'),
-#                     yaxis=dict(title='Distorção (Cost)'))
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=list(range(1, max_clusters + 1)), y=distortions, mode='lines+markers', name='Distorção (Cost)'))
+fig.update_layout(title='Método do Cotovelo para Encontrar o Número Ideal de Clusters',
+                    xaxis=dict(title='Número de Clusters'),
+                    yaxis=dict(title='Distorção (Cost)'))
 
     
-# st.plotly_chart(fig)
+st.plotly_chart(fig)
 clusters = k_modes_clustering(dados, 4)
 dados['Cluster'] = clusters
 distribuicao_Cluster(dados)
 dados.to_csv('PK_cluster.csv', index=False)
-# st.text('''
-#     Então fizemos uma função que gera os clusters utilizando o k-modes. Então geramso um gráfico de barra que mostra a distribuição 
-#     de cada cluster. Não fizemos um gráfico de distribuição, que normalmente é o melhor tipo de visualização para clusters
-#     porque, no k-modes os dados são mantidos como categorigos e não transformados em dados binarios utilizando o one hot encoding.
-# ''')
-#st.title('Aplicativo de Clustering com K-Modes e Gráfico da Silhueta')
-
-# Carregamento dos dados (substitua 'seu_dataset.csv' pelo nome do seu arquivo de dados)
-# data = pd.read_csv('data\data_cluster.csv')
-
-# # Codificação dos dados categóricos com LabelEncoder
-# encoder = LabelEncoder()
-# for column in data.columns:
-#     data[column] = encoder.fit_transform(data[column])
-
-# # Sidebar para escolher o número de clusters
-# n_clusters = st.sidebar.slider('Número de Clusters', min_value=2, max_value=10, value=4)
-
-# # Calcular clusters
-# km = KModes(n_clusters=n_clusters, init='Huang', n_init=10, verbose=0)
-# clusters = km.fit_predict(data)
-
-# # Calcular o coeficiente de silhueta
-# silhouette_avg = silhouette_score(data, clusters, metric='hamming')
-# silhouette_values = silhouette_samples(data, clusters, metric='hamming')
-
-# st.write(f'Clusters: {clusters.tolist()}')
-# # Exibir o coeficiente de silhueta
-# st.write(f'Coeficiente de Silhueta: {silhouette_avg:.2f}')
-
-# # Plotar o gráfico da silhueta com Plotly
-# plot_silhouette(silhouette_avg, silhouette_values, clusters)
-
-# # Defina cores personalizadas para cada cluster (RGB)
-
-
-
-
-
-
-
-
+st.text('''
+    Então fizemos uma função que gera os clusters utilizando o k-modes. Então geramso um gráfico de barra que mostra a distribuição 
+    de cada cluster. Não fizemos um gráfico de distribuição, que normalmente é o melhor tipo de visualização para clusters
+    porque, no k-modes os dados são mantidos como categorigos e não transformados em dados binarios utilizando o one hot encoding.
+''')
+st.title('Aplicativo de Clustering com K-Modes e Gráfico da Silhueta')
